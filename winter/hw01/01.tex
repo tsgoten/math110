@@ -1,0 +1,45 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amssymb, amsthm, chngcntr, enumitem, multirow, xcolor}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\theoremstyle{definition} 
+\newtheorem{q}{}
+\renewcommand*{\theq}{\alph{q}}
+\counterwithin*{q}{section}
+\pagecolor{darkgray}
+\begin{document}
+\color{white}
+	
+\makechaptertitle{Math 110 Homework 1}
+
+\section{Chapter 1.A}
+\begin{q}
+    Problem 11 \\
+    Explain why there does not exits $ \lambda \in \C $ such that
+    $$ \lambda( 2- 3i, 5+4i, -6 + 7i) = (12 -5i, 7 + 22i, -32 - 9i) $$
+    By the definition of multiplication of scalars and lists we know that $ \lambda $ must satisfy all the following equations.
+    \begin{align*}
+        \lambda (2 - 3i) &= 12 - 5i  \\
+        \lambda (5+4i) &= 7 + 22i \\
+        \lambda (-6 + 7i) &= -32 - 9i
+        \intertext{Solving for the first two equations gives us that}
+        \lambda = 3 + 2i
+        \intertext{But for the last equation we find that this value for $ \lambda $ does not work. 
+        Therefore no such $ \lambda $ exists that satisfies all three equations and therefore the larger equation.}
+    \end{align*}
+\end{q}
+
+\end{document}
