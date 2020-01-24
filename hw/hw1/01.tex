@@ -1,0 +1,91 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amssymb, amsthm, chngcntr, multirow, xcolor}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\newcommand{\question}[1]{\textcolor{blue}{#1} \\}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1} \\}
+\theoremstyle{definition} 
+\newtheorem{q}{}
+
+\begin{document}
+\makechaptertitle{Math 110 Homework 0}
+
+\begin{q}
+    \question{What is your name?}
+     Tarang Srivastava
+\end{q}
+\begin{q}
+    \question{
+        Write a short paragraph  about  yourself,  answering  questions  like  these:  What  year student are you?  Where are you from?  Did you come directly to Cal from high school, or did you take a more complicated path?  What math courses have you taken so far?  What is your major?  Why are you taking Math 110?  (Add anything else that you’d like.  Ignore questions that you’d prefer not to answer.) 
+    }    
+    I'm a first year student from South Brunswick, New Jersey (about 10 minutes from Princeton).
+    Currently I have declared Applied Mathematics with a Statistics cluster, but I may very well switch to pure math.
+    I am also doubling in Computer Science.
+    I have actually not taken any math courses at Berkeley! This will be my first official math course, along with 104 this semester.
+    I have taken CS70 though.
+    I am a little nervous about this course, because when I took linear algebra the first time I had personal problems that really hindred my ability to do well in the class. 
+    Since, then I have grown a lot, but I still feel like I'm lacking significant linear algebra background especially compared to my peers who took Math 54 at Berkeley. Regardless I am confident in my mathematical abilities and hope to do well in the course.
+\end{q}
+\begin{q}
+    \question{Express $\frac{1}{2i -1}$ in the form $ a + bi $ (with $ a $ and $ b $ real numbers)}
+    The manipulations follow using the conjugate
+    \begin{align*}
+        \dfrac{1}{2i -1} \cdot \dfrac{2i + 1}{2i + 1} &= \dfrac{2i + 1}{-5}\\ 
+        &= -\frac{1}{5} -\frac{2}{5}i
+    \end{align*}
+\end{q}
+\begin{q}
+    \question{Find two distinct square roots of $ i $}
+    We begin with the expression for complex numbers in polar coordinates
+    $$ e^{i\pi/2} = \cos(\pi/2) + i \sin(\pi/2) = i $$
+    Then we take the square root and find 
+    $$ \pm \sqrt{i} = \pm e^{i\pi/4} = \cos(\pi/4) + i \sin(\pi/4)$$
+    $$ \pm \sqrt{i} = \pm \left(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} i \right)$$
+\end{q}
+\begin{q}
+    \question{Prove that $ 1 \cdot x = x $ for all $ x $ in $ \textbf{F}^n $} 
+    By the definition of scalar multiplication $$ 1 \cdot x = (1x_1, 1x_2, ..., 1x_n) $$
+    and by the existence of the multiplicative identity in a field we have that this is just
+    $$ (1x_1, 1x_2, ..., 1x_n) = (x_1, x_2, ..., x_n) = x $$
+\end{q}
+\begin{q}
+    \question{Is the empty set a vector space?} 
+    The empty set is not a vector space, because it fails the condition where an additive and multiplicative identity must exist in the vector space.
+    It obviously doesn't exit beause the set is empty.
+\end{q}
+\begin{q}
+    \question{
+        Let $ V $ be the $\R$-vector space consisting of all “infinite tuples” $(a_0, a_1, a_2, a_3, . . .)$ with $ a_i \in \R $.  
+        Is the set of those tuples such that  $ \lim \limits_{i \rightarrow \infty} = 0 $ a subspace of $V $? 
+        How about the set of those tuples with $ \lim \limits_{i \rightarrow \infty} = +\infty $ ? 
+        Finally,  what about the set of those tuples for which  $ \lim \limits_{i \rightarrow \infty} a_i $ exists?
+    } 
+    The set of tuples with $\lim \limits_{i \rightarrow \infty} = 0 $  \textbf{is a subspace} of  $ V $. 
+    It satisfies the additive identity since its possible to construct an infinite tuple with all zeros and then the $ \lim \limits_{i \rightarrow \infty} $ is still going to be equal to 0. 
+    It satisfies the additive identity, because the tuples can be added as before and it still maintains that the limit equal to 0.
+    Multiplication also works with scalars, since the resulting tuple will have all values in the field and any scalar times the limit of 0 will still result in a limit of 0. \\
+    The set of tuples with  $ \lim \limits_{i \rightarrow \infty} = +\infty $ \textbf{is not a subspace} of $ V $. Since, it does not satisfy the additive identity condition. 
+    It is impossible to construct a tuple such that all the elements are 0s and the $ \lim \limits_{i \rightarrow \infty} = +\infty $. Since, all $ a_i = 0 $ for 0. \\
+    The set of tuples where $ \lim \limits_{i \rightarrow \infty} a_i $ exists \textbf{is a subspace} of $ V $, since the additive inverse exists.
+    The case when $ a_i = 0 $ for all $ i $ and the limit exists and is equal to 0 gives the additive identity. 
+    Addition is simply defined as before for tuples, and the by the rule of sum of limits we have that $ \lim \limits_{i \rightarrow \infty} a_i + \lim \limits_{i \rightarrow \infty} b_i = \lim \limits_{i \rightarrow \infty} (b_i + a_i) $.
+    Therefore, the limit still exists too. For multiplication, since all the multiplication happens in the field we know that for some scalar $ c $,  $ \lim \limits_{i \rightarrow \infty} c \cdot a_i = c \cdot \lim \limits_{i \rightarrow \infty}  a_i $.
+    Therefore, the limit exists in the space as well. 
+\end{q}
+
+\end{document}
