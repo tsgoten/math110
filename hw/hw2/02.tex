@@ -1,6 +1,6 @@
 \documentclass[10pt, twocolumn]{article}
 \author{Tarang Srivastava}
-\usepackage{amsmath, amssymb, amsthm, chngcntr, enumitem, multirow, xcolor}
+\usepackage{amsmath, amssymb, amsthm, chngcntr, enumitem, multirow, thmtools, xcolor}
 \usepackage{graphicx}
 \usepackage[margin=.25in]{geometry}
 \setlength{\columnsep}{.5in}
@@ -20,21 +20,24 @@
 	\end{small}
 \end{center}
 }
-\theoremstyle{definition} 
-\newtheorem{q}{}
-\renewcommand*{\theq}{\alph{q}}
-\counterwithin*{q}{section}
+\declaretheoremstyle[
+spaceabove=\topsep, spacebelow=\topsep,
+headfont=\normalfont\bfseries,
+notefont=\bfseries, notebraces={}{},
+bodyfont=\normalfont\itshape,
+postheadspace=0.5em,
+name={\ignorespaces},
+numbered=no,
+headpunct=:]
+{mystyle}
+\declaretheorem[style=mystyle]{q}
+
 \begin{document}
 	
 \makechaptertitle{Math 110 Homework 1}
 
-\section{Chapter 1.A}
-\begin{q}
-    Problem 11 \\
-    \question{
-        Explain why there does not exits $ \lambda \in \C $ such that
-        $$ \lambda( 2- 3i, 5+4i, -6 + 7i) = (12 -5i, 7 + 22i, -32 - 9i) $$
-    }
+\section*{Chapter 1.A}
+\begin{q}[Problem 11]
     By the definition of multiplication of scalars and lists we know that $ \lambda $ must satisfy all the following equations.
     \begin{align*}
         \lambda (2 - 3i) &= 12 - 5i  \\
@@ -47,10 +50,8 @@
     \end{align*}
 \end{q}
 
-\section{Chapter 1.B}
-\begin{q}
-    Problem 1 \\
-    \question{Prove that $ -(-v) = v $ for every $ v \in V $}
+\section*{Chapter 1.B}
+\begin{q}[Problem 1]
     By the existence of an additive inverse for all $ v $ we have
     \begin{align*}
         -(-v) + (-v) & = 0 \\
@@ -62,9 +63,7 @@
         \intertext{ $ -(-v) = v $ as desired.}
     \end{align*}
 \end{q}
-\begin{q}
-    Problem 6 \\ 
-    \question{page 17 Axler}
+\begin{q}[Problem 6]
     No, $ \R \cup \{\infty\} \cup \{-\infty\} $ is not a vector space, because it does not follow all the properties of a vector space.
     Specifically, consider associativity. 
     It must be true that, 
@@ -76,18 +75,14 @@
 \end{q}
 
 \section{Chapter 1.C}
-\begin{q}
-    Problem 1(c) \\
-    \question{Determine whether it is a subspace}
+\begin{q}[Problem 1(c)]
     No. Consider the following counter example. 
     Let $ a = (1, 1, 0) $. This is in the subspace since $ 1 \cdot 1 \cdot 0 = 0 $ 
     and let  $ b = (1, 0, 1) $. This is in the subspace since $ 1 \cdot 0 \cdot 1 = 0 $ 
     For the subspace to be closed under addition $ a + b $ must be in the subspace, 
     but $ a + b = (1, 1, 1) $ which is not in the subspace since $ 1 \cdot 1 \cdot 1 = 1 $.
 \end{q}
-\begin{q}
-    Problem 1(d) \\
-    \question{Determine whether it is a subspace}
+\begin{q}[Problem 1(d)]
     Yes. It is closed under vector addition and scalar multiplication. The additive identitiy can be shown from these two as noted in lecture.\\
     Closure under addition: \\
     Let $ x = (x_1, x_2, x_3) $ and $ y = (y_1, y_2, y_3) $ such that they are in the subspace.
@@ -98,8 +93,7 @@
     Let $ x = (x_1, x_2, x_3) $ and $ c \in \mathbb{F} $ it holds that $ c x_1 = 5c x_3 $ which is then just $ x_1 = 5 x_3 $ 
     therefore it is closed under scalar multiplication. Also, note that $ cx_1 \in \mathbb{F} $ so that condition is met as well for all the elements.
 \end{q}
-\begin{q}
-    Problem 3 \\
+\begin{q}[Problem 3]
     Yes. The following is a subspace. \\
     Clousure under addition: \\
     Let $ f, g \in \R^{(4, 4)} $ such that they are differentiable and $ f'(-1) = 3f(2) $ and $ g(-1) = 3g(2) $. 
@@ -116,24 +110,23 @@
     $$ (\lambda f')(-1) = (\lambda 3 f)(2) $$
     as desired.
 \end{q}
-\begin{q}
-    Problem 5 \\
+\begin{q}[Problem 5]
     No. The complex vector space is a vector space over $ \C $ so it is possible to multiply for example with a scalar $ i $, 
     in which case $ \R^2 $ is not closed under multiplication.
 \end{q}
-\begin{q}
-    Problem 7 \\
+\begin{q}[Problem 7]
     Let $ U = \{(x, y) \in \R^2 : x^2 + y^2 = 1\} $. That is $ U $ the unit circle. 
     We can always find an additive inverse, namely, $(-x, -y)$ for some $ x, y \in U $. 
     It is not a subspace because it does not have the additive identitiy.
 \end{q}
-\begin{q}
-    Problem 8 \\
+\begin{q}[Problem 8]
     From question 1 part c. 
     Let $U =\{(x, y) \in \R^2 : xy = 0\} $
     Clearly, and $ c \in \R $ times the $ u \in U $ will still be in the subspace. Since, if $ xy = 0 \implies cxy = 0 $. 
     It is not closed under addtion as shown in Problem 1(c).
 \end{q}
+
+\section{2.A}
 
 
 
