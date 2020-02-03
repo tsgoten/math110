@@ -158,7 +158,7 @@ headpunct=:]
 \end{q}
 \begin{q}[Problem 12]
     Let $ A $ and $ B $ be subspaces of a vector space $ V $ over a field $ \F $.
-    We wish to show that without
+    We wish to show that
     $$ A \cup B \text{ is a subspace } \iff A \subset B $$
     Note, that it is possible $ A = B $ and here we are considering that $ B $ is simply the larger subspace without loss of generality. 
     To show the '$\impliedby$' part, if $ A \subset B $, then $ A \cup B = B $. $ B $ is a subspace therefore $ A \cup B $ is a subspace.
@@ -176,6 +176,44 @@ headpunct=:]
     $ a + b + (-a) \in A $. So, $ b \in A $ which is also a contradiction because it implies that all elements of $ B $ are in $ A $; 
     that is $ A \subset B $. Which then implies $ A = B $, and that is a contradiction. 
     Therefore, it must be the case that $ A \subset B $.  
+\end{q}
+\begin{q}[Problem 13]
+    Let $ A $, $ B $ and $ C $ be subspaces of a vector space $ V $ over a field $ \F $.
+    We wish to show that 
+    $$ A \cup B \cup C \text{ is a subspace } \iff A \subset C \text{ and } B \subset C $$
+    Note, that it is possible $ A = B = C $ and here we are considering that $ C $ is simply the larger subspace without loss of generality. 
+    To show the '$\impliedby$' part, if $ A \subset C $, then $ A \cup C = C $. 
+    and $ B \subset C $, then $ B \cup C = C $. 
+    Using associativity and distribuitivity we can state, 
+    $$ A \cup B \cup C = (A \cup B) \cup C = (A \cup C) \cup (B \cup C) = C \cup C = C $$
+    $ C $ is a subspace therefore $ A \cup B \cup C $ is a subspace.
+    Now for the trickier '$\implies$' direction.
+    Assume for contradiction that if $ A \cup B \cup C $ is a subspace, then $ A \not\subseteq C $ or $ B \not\subseteq C$
+    That is, $ \exists a \in A $ such that $ a \not\in C $. 
+    Let $ a \in A $ and $ a \not\in C $, also let $ c \in C $.  
+    Since, $ A $ and $ C $ are both subspaces 
+    $ a + c $ is either in $ A $ or $ C $. 
+    Consider the case when $ a + c \in C $. 
+    $ -c \in C $ by the existence of an additive inverse. 
+    Then, since $ C $ is closed under vector addition 
+    $ a + c + (-c) \in C $ which is a contradiction since $ a \in C $. 
+    Consider the other case that $ a +c \in A $. Then by the same argument as before
+    $ a + c + (-a) \in A $. So, $ c \in A $ which is also a contradiction because it implies that all elements of $ C $ are in $ A $; 
+    that is $ A \subset C $. Which then implies $ A = C $, and that is a contradiction. 
+    Therefore, it must be the case that $ A \subset C $.  
+    Similarily, $ \exists b\in B $ such that $ b \not\in C $. 
+    Let $ b \in B $ and $ b \not\in C $, also let $ c \in C $.  
+    Since, $ B $ and $ C $ are both subspaces 
+    $ b + c $ is either in $ B $ or $ C $. 
+    Consider the case when $ b + c \in C $. 
+    $ -c \in C $ by the existence of an additive inverse. 
+    Then, since $ C $ is closed under vector addition 
+    $ b + c + (-c) \in C $ which is a contradiction since $ b \in C $. 
+    Consider the other case that $ b +c \in B $. Then by the same argument as before
+    $ b + c + (-a) \in B $. So, $ c \in B $ which is also a contradiction because it implies that all elements of $ C $ are in $ B $; 
+    that is $ B \subset C $. Which then implies $ B = C $, and that is a contradiction. 
+    Therefore, it must be the case that $ B \subset C $
+    We have shown that it is true that $ A $ and $ B $ are both contained in $ C $. 
 \end{q}
 \begin{q}[Problem 15]
     From the defintion of addition of vector spaces 
