@@ -7,6 +7,7 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\question}[1]{\textcolor{blue}{#1} \\}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\inv}[1]{#1^{-1}}
 \newcommand{\todo}[1]{\textcolor{red}{TODO: #1} \\}
@@ -155,6 +156,27 @@ headpunct=:]
     Therefore, $ \lambda u \in U_1 \cap U_2 $.
     Thus, we have shown that $ U_1 \cap U_2 $ forms a subspace. 
 \end{q}
+\begin{q}[Problem 12]
+    Let $ A $ and $ B $ be subspaces of a vector space $ V $ over a field $ \F $.
+    We wish to show that without
+    $$ A \cup B \text{ is a subspace } \iff A \subset B $$
+    Note, that it is possible $ A = B $ and here we are considering that $ B $ is simply the larger subspace without loss of generality. 
+    To show the '$\impliedby$' part, if $ A \subset B $, then $ A \cup B = B $. $ B $ is a subspace therefore $ A \cup B $ is a subspace.
+    Now for the trickier '$\implies$' direction.
+    Assume for contradiction that if $ A \cup B $ is a subspace, then $ A \not\subseteq B $. 
+    That is, $ \exists a \in A $ such that $ a \not\in B $. 
+    Let $ a \in A $ and $ a \not\in B $, also let $ b \in B $.  
+    Since, $ A $ and $ B $ are both subspaces 
+    $ a + b $ is either in $ A $ or $ B $. 
+    Consider the case when $ a + b \in B $. 
+    $ -b \in B $ by the existence of an additive inverse. 
+    Then, since $ B $ is closed under vector addition 
+    $ a + b + (-b) \in B $ which is a contradiction since $ a \in B $. 
+    Consider the other case that $ a +b \in A $. Then by the same argument as before
+    $ a + b + (-a) \in A $. So, $ b \in A $ which is also a contradiction because it implies that all elements of $ B $ are in $ A $; 
+    that is $ A \subset B $. Which then implies $ A = B $, and that is a contradiction. 
+    Therefore, it must be the case that $ A \subset B $.  
+\end{q}
 \begin{q}[Problem 15]
     From the defintion of addition of vector spaces 
     $$ U + U = \{u_1 + u_2 : u_1, u_2 \in U\}  $$
@@ -197,7 +219,7 @@ headpunct=:]
     Observe
     $ i \cdot (1 + i)  + (-i) \cdot (1 -i) = 0 $
     therefore it is not linearly independent, 
-    because we can choose nonzero coeficients such that the linear combination is equal to zero.
+    because we can choose nonzero coeficients from $ \C $ such that the linear combination is equal to zero.
 \end{q}
 \begin{q}[Problem 6]
     Consider the arbitrary linear combination 
