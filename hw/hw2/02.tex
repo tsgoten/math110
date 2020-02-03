@@ -45,9 +45,9 @@ headpunct=:]
         \lambda (-6 + 7i) &= -32 - 9i
         \intertext{Solving for the first two equations gives us that}
         \lambda = 3 + 2i
-        \intertext{But for the last equation we find that this value for $ \lambda $ does not work. 
-        Therefore no such $ \lambda $ exists that satisfies all three equations and therefore the larger equation.}
     \end{align*}
+    But for the last equation we find that this value for $ \lambda $ does not work. 
+        Therefore no such $ \lambda $ exists that satisfies all three equations and therefore the larger equation.
 \end{q}
 
 \section*{Chapter 1.B}
@@ -59,9 +59,9 @@ headpunct=:]
         -(-v) + (-v) + v & = 0 + v \\
         \intertext{by associativity}
         -(-v) + ((-v) + v) & = v \\
-        -(-v) + 0 & = v \\
-        \intertext{ $ -(-v) = v $ as desired.}
+        -(-v) + 0 & = v
     \end{align*}
+    $ -(-v) = v $ as desired.
 \end{q}
 \begin{q}[Problem 6]
     No, $ \R \cup \{\infty\} \cup \{-\infty\} $ is not a vector space, because it does not follow all the properties of a vector space.
@@ -125,6 +125,54 @@ headpunct=:]
     Clearly, and $ c \in \R $ times the $ u \in U $ will still be in the subspace. Since, if $ xy = 0 \implies cxy = 0 $. 
     It is not closed under addtion as shown in Problem 1(c).
 \end{q}
+\begin{q}[Problem 9]
+    Yes, it is a subspace because it is closed under vecotr addition and scalar multiplicaition.
+    To show it is closed under addition let $f, g $ be periodic functions with periods $ p, q $ respectively in $ \R^\R $.
+    Then, we must show that $ (f + g)(x) = (f+g)(x + r) $ for some $ r \in \R $. 
+    Observe, we can select $ r = pq $. 
+    For period functions we have the case that 
+    $ f(x) = f(x+p) + f(x+pq) $;
+    the same can be stated for $ g $. 
+    Therefore, by defintion of addition of functions
+    $$ (f + g)(x) = f(x) + g(x) = f(x + r) + g(x + r) = (f+g)(x + r) $$
+    which shows that the sum of periodic functions are periodic as well over some period. 
+    Showing closure under multiplicaition is more straightforward, since for some $ c \in \mathbb{F} $
+    $ (cf)(x) = cf(x) = cf(x+p) = (cf)(x+p) $,
+    which shows that after scalar multiplication it is still a periodic function. 
+\end{q}
+\begin{q}[Problem 10]
+    Yes, $ U_1 \cap U_2 $ form a subspace. 
+    To show closure under addition let $ u_1, u_2 \in U_1 \cap U_2 $. 
+    We will argue that $ u_1 + u_2 $ is in both $ U_1 $ and $ U_2 $. 
+    Since, $ u_1 $ and $ u_2 $ are in $ U_1 $ and since $ U_1 $ is closed under addtion $ u_1 + u_2 \in U_1 $. 
+    The exact same argument follows for $ U_2 $,
+    Since, $ u_1 $ and $ u_2 $ are in $ U_2 $ and since $ U_2 $ is closed under addtion $ u_1 + u_2 \in U_2 $. 
+    Therefore, $ u_1 + u_2 $ is in both $ U_1 \cap U_2 $ and is closed under addition.  \\
+    To show closure under scalar multiplication let $ \lambda \in \mathbb{F} $ and $ u \in U_1 \cap U_2 $. 
+    Since, $ U_1 $ is closed under scalar multiplication $ \lambda u \in U_1 $.
+    Similarily,  
+    since, $ U_2 $ is closed under scalar multiplication $ \lambda u \in U_2 $.
+    Therefore, $ \lambda u \in U_1 \cap U_2 $.
+    Thus, we have shown that $ U_1 \cap U_2 $ forms a subspace. 
+\end{q}
+\begin{q}[Problem 23]
+    No, the following statement is not true. 
+    Consider the following counterexample. 
+    Let $ V = \R^2 $, which is a known vector space from the textbook.  
+    Let $ W = {(x, x): x \in \R }. $ which is a vector space. 
+    To show that $ W $ is closed under addition let $ w_1 = (a, a), w_2 = (b, b) \in W $. 
+    Then $ w_1 + w_2 = (a+b, a+b) \in W $. 
+    To show $ W $ is closed under multiplication let some constant $ c \in \R $ multiply some vector $ w = (a, a) \in W $. 
+    Then, $ cw = (ca, ca) \in W $ since $ ca \in \R $ and is closed under scalar multiplicaition. 
+    Thus, $ W $ is a subspace. 
+    Now, let $ U_1 = {(x, 0) : x \in \R } $ and $ U_2 = {(0, x) : x \in \R } $ which are both subspaces from examples in the textbook.
+    We, can show that $ U_1 \cap W = {(0, 0)} $, since it is the only value for $ x $ where all elements in the vector are the same. 
+    By the same argument $ U_2 \cap W = {(0, 0)} $. 
+    So, the shows that both are valid direct sums. 
+    We know that $ U_1 \oplus W = (x+y, x) $ and $ U_2 \oplus W = (x, x+y) $. 
+    It is now clear that we can express any arbitrary $ (a, b) $ as $ (x, x+y) $ since we can find a $ y $ such that $ y = b - a $. 
+    Therefore, they both are the same direct sum and they both equal $ V $, but by construction $ U_1 \neq U_2 $. 
+\end{q}
 
 \section*{2.A}
 \begin{q}[Problem 3]
@@ -149,7 +197,7 @@ headpunct=:]
     $$ a(v_1 - v_2) + b(v_2 - v_3) + c(v_3 - v_4) + d v_4 $$
     which rearraning gives us 
     $$ av_1 + (b-a)v_2 + (c-b)v_3 + (d-c) v_4 $$
-    which for us to have a linear combination equal zero we must select $ a = $. 
+    which for us to have a linear combination equal zero we must select $ a = 0$. 
     Which implies that $ b = 0$ which then implies $ c = 0 $ and that implies $ d = 0 $. 
     Therefore, the only combination that results in the linear combination being zero is for all the coefficients to be zero.
     Therefore, it is linearly independent. 
