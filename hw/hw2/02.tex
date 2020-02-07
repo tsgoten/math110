@@ -64,7 +64,20 @@ headpunct=:]
     Thus, showing that $ w $ is in the span of $ v_1, ..., v_m $. 
 \end{q}
 \begin{q}[Problem 11]
-      
+    To show the "$ \implies $" direction, assume for contradiction $ w \in \vspan(v_1, ..., v_m) $.
+    Then, we can express $ w $ as a linear combination of $ v_1, ..., v_m $. 
+    $ w = a_1 v_1 + ... + a_m v_m $
+    Let $ a_1 v_1 + ... + a_m v_m - w $ be a linear combination, but here we have a contradiction. 
+    Since, 
+    $ a_1 v_1 + ... + a_m v_m - w = a_1 v_1 + ... + a_m v_m - (a_1 v_1 + ... + a_m v_m) = 0 $
+    for non-zero coefficients $ a_1, ..., a_m $. 
+    Therefore, $ w \not\in \vspan(v_1, ..., v_m) $. \\
+    For the "$ \impliedby $" direction, assume for contradiction $ v_1, ..., v_m, w $ is linearly dependent. 
+    Then, there exists a linear combination with nonzero coefficients such that
+    $ a_1v_1 + ... + a_m v_m + cw = 0 $. 
+    Subtracting by $ cw $ and dividing by $ c $, for when $ c \neq 0, $ if $ c = 0 $ we are done, 
+    we get $ \frac{a_1}{c} v_1 + ... + \frac{a_m}{c} v_m = w $, which is a contradiction, since it implies that $ w \in \vspan(v_1, ..., v_m) $. 
+    Thus, it must be that $ v_1, ..., v_m, w $ is linearly independent.
 \end{q}
 
 \end{document}
