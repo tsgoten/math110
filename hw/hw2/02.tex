@@ -80,4 +80,33 @@ headpunct=:]
     Thus, it must be that $ v_1, ..., v_m, w $ is linearly independent.
 \end{q}
 
+\section{Exercise 2.B}
+\begin{q}[Problem 1]
+    The zero-Vector space, $ V = \{0\} $ is the only vector space with exactly one basis, and that is the empty set. 
+    Suppose there is another vector space with a basis $ b $ with length $ > 0 $. 
+    Then, let $ v \in b $. 
+    By the existence of an additive identity we know that $ -v $ is also in the vector space, and thus we can have an equally valid basis with $ \{-v\} $, and thus having two bases.
+    Therefore, it must be the case that for a vector space to have exactly one basis, the basis must be of length 0, which only the empty set satisfies. 
+\end{q}
+\begin{q}[Problem 3]
+    (a) A possible basis for $ U $ is as follows
+    $ (3,1, 0, 0, 0), (0, 0, 7, 1, 0), (0, 0, 0, 0, 1) $
+    observe that for any linear combination it holds that $ x_1 = 3x_2 $ and $ x_3 = 7x_4 $. \\
+    (b) We can extend the previous basis by adding the following two vectors to get a basis for $ \R ^5 $.
+    $ (3,1, 0, 0, 0), (0, 0, 7, 1, 0), (0, 0, 0, 0, 1), (1, 0, 0, 0, 0), (0, 0, 1, 0, 0) $
+    Notice, that by adding the following vectors we can express any arbirary $ x_2 = a(3, 1, 0, 0, 0) - 3a(1, 0, 0, 0, 0) $. 
+    The same reasoning follows for $ x_4$. \\
+    (c) From part (b) we can just form a subspace that handles the case to express arbitrary $ x_2 $ and $ x_4 $.
+    Therefore, let $ W = \{(x, 0, y, 0, 0) \colon x, y \in \R \} $. That is, $ W = \vspan((1, 0, 0 0, 0), (0, 0, 1, 0, 0))$. 
+    We then also observe that $ U \cap W = \{0\} $ as desired. 
+\end{q}
+\begin{q}[Problem 5]
+    Consider the following basis 
+    $$ 1, x, x^3 + x^2, x^3 $$ 
+    Thus, for any arbitrary polynomial of degree two you can select $ a(x^3 + x^2) - a(x^3) $. 
+\end{q}
+\begin{q}[Problem 7]
+    
+\end{q}
+
 \end{document}
