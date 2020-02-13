@@ -79,6 +79,24 @@ headpunct=:]
     we get $ \frac{a_1}{c} v_1 + ... + \frac{a_m}{c} v_m = w $, which is a contradiction, since it implies that $ w \in \vspan(v_1, ..., v_m) $. 
     Thus, it must be that $ v_1, ..., v_m, w $ is linearly independent.
 \end{q}
+\begin{q}[Problem 14]
+    $ \impliedby $. If $ v_1, ..., v_m $ is linearly independent then by 2.23, the length of the spanning list must be greater than or equal to $ m $. 
+    That $ m \leq \text{length of spanning list} $. 
+    Therefore, for every positive integer $ m $ the length of the spanning list is greater than that. 
+    Thus, the length of the spanning list is greater than every positive integer. Hence, no list spans $ V $, from a similar argument as 2.16. \\
+    $ \implies $ If $ V $ is inifinit-dimensional a finite number of vectors cannot span $ V $. Therefore there must exists a sequence of vectors $ v_1, v_2, ... \in V $. 
+    We also get that $ v_1, ..., v_m $ is linearly independent for all positive integers $m $, since there exists some $ v_{m+1}  \not \in \vspan(v_1, ..., v_m )$. Which by inductions shows the statement holds for all positive integers.
+\end{q}
+\begin{q}[Problem 17]
+    Assume for contradiction that $ p_0, ..., p_m $ are linearly independent. 
+    Firstly, we have that $ 1, x, ..., x^m  $ is a basis for $ \mathcal{P}_m(\mathbb{F})$. 
+    Thus, every linearly independent list is of size $ \leq m + 1 $. 
+    Construct a functions that is always $ q(x) = 2 $ and add it to the linearly independent list. 
+    Since, now the size is $ m + 2 $ the list is no longer linearly indpendent. 
+    Thus, we can state that $ a_0 p_0 + ... + a_m p_m + c q = 0 $. 
+    Since, the list is no longer linearly independent we can move $ cq $ to the othe side and divide by $ c $ to get a linear combination for just $ q $. 
+    $ q = b_0 p_0 + ... + b_m p_m $, But for all $ p_i(2)  = 0 $, but $ q(2) = 2 $. Thus, we have a contradiction $ 2 = 0 $. 
+\end{q}
 
 \section{Exercise 2.B}
 \begin{q}[Problem 1]
@@ -102,11 +120,48 @@ headpunct=:]
 \end{q}
 \begin{q}[Problem 5]
     Consider the following basis 
-    $$ 1, x, x^3 + x^2, x^3 $$ 
-    Thus, for any arbitrary polynomial of degree two you can select $ a(x^3 + x^2) - a(x^3) $. 
+    $$ 1, x + 1, x^3 + x^2, x^3 $$ 
+    Firstly, it meets the condition that none of the vectors are of degree 2. 
+    Now to show it is a basis, first consider indpeendence. For some $ a_i \in \R $ we have 
+    $ a_1 + a_2(x + 1)  + a_3(x^3 + x^2) + a_4 (x^3) = 0 $. 
+    Rearraning the terms we get 
+    $ (a_1 + a_2) + a_2 x + a_3 x^2 + (a_3 + a_4) x^3  = 0 $ 
+    Clearly, $ a_2 = a_3 = 0 $. Then, it follows that $ a_4 = 0 = a_1 $, since $ 1, x, x^2, x^3 $ are linearly independent. 
+    Thus, it is only zero when all the coefficients are zero. 
+    To show that it indeed spans $ P_4(F) $ observe that $ a = (a_1 + a_2) $ and $ (a_3 + a_4)x^3 = ax^3 \implies \frac{a_3 + a_4}{a}x^3 = x^3$. 
+    Thus, the standard basis can be expressed as a linear combination of the new basis, so all $ p \in \vspan $.
+    Showing, that it is a valid basis.
 \end{q}
 \begin{q}[Problem 7]
-    
+    Not true, consider the following counterexample. 
+    Consider the basis from Problem 5. Let $ v_1 = x^3, v_2 = x^3 + x^2, v_3 = x + 1, v_4 = 1 $. 
+    We know frmom Problem 5 that this forms a basis for $ P_4(\R) = V$.
+    Let $ U $ be the subspace of polynomials of degree at most 3, that have no integer terms. 
+    That is for some $ p \in U $, $ p(x) = 0 $.  
+    We observe that it is indeed the case that only $ v_1, v_2 \in U $. 
+    But they do not form a basis since no linear combination of $ x^3 $ and $ x^3 + x^2 $ is going to equal $ x \in U $.
+    Therefore, it does not form a basis. 
 \end{q}
+\begin{q}[Problem 8]
+    To show that 
+    $$ u_1, ..., u_m, w_1, ..., w_n $$ 
+    is a basis of $ V $. We must show that it spans $ V $ and that it is linearly independent.
+    We know it spans $ V $ by the fact that $ V = U \oplus W $. 
+    That is, for $ v \in V, u \in U, w \in W $ 
+    $$ v = u + w = a_1u_1 + ... + a_m u_m  + b_1 w_1 + ... + b_n w_n $$
+    Therefore, $ v \in \vspan(u_1, ..., u_m, w_1, ..., w_n) $.
+    Now, we are left to show that $u_1, ..., u_m, w_1, ..., w_n$ is linearly independent.
+    If it is linearly independent it must be the case, 
+    \begin{align*}
+    a_1u_1 + ... + a_m u_m  + b_1 w_1 + ... + b_n w_n  = 0
+    \intertext{rearraning terms we get that}
+    a_1u_1 + ... + a_m u_m   = -(b_1 w_1 + ... + b_n w_n)
+    \intertext{Which means that $ u = w $, but $ U \cap W = \{0\}$ so it must be that }
+    a_1u_1 + ... + a_m u_m   = -(b_1 w_1 + ... + b_n w_n) = 0
+    \end{align*}
+    But since $ u_1, ..., u_m $ and $ w_1, ..., w_n $ are linearly independent it must be that 
+    $ a_1 = ...= a_n= b_1= ...= b_m = 0 $. Therefore, we have show linear independence. 
+\end{q}
+
 
 \end{document}
