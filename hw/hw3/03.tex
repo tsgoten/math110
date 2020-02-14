@@ -62,12 +62,31 @@ headpunct=:]
 	Since, it is of the right length $ m + 1 $, and for all $ 0 \leq i \leq m $, $ p_i $ is in $ \poly $.
 	Then, it must be a basis for $ \poly $.
 \end{q}
-\begin{q}
+\begin{q}[Problem 12]
 	Assume for contradiction that $ U \cap W = \{0\}$.
 	Then, $ U + W $ is a direct sum, and $ U, W \subset V $. 
 	So, it must be that $ U \oplus W = V $. 
 	Thereofre, $ \dim V = 9 = \dim W + \dim U - \dim W \cap U = 5 + 5 - 0 $. 
 	Here we have a contradiction, thus, $ U \cap W \neq \{0\} $.
+\end{q}
+\begin{q}[Problem 13]
+	We know that $ \dim \C^6 = \dim U + \dim W - \dim (U \cap W) $. 
+	So the dimension of the intersection is $ \dim (U \cap W) = 4 + 4 - 6 = 2 $.
+	There exists a basis $ B $ such that $ |B| = 2 $. 
+	Denote the two vectors in the basis of $ B $ as $ u, w \in B $. 
+	Since, $ u, w $ form a linearly independent list, then they are not scalar multiples of each other.
+\end{q}
+\begin{q}[Problem 14]
+	Suppose that all the subspaces of $ V $ are disjoint.
+	That is, for all $ i, j \in [1, m] $ it is the case that $ U_i \cap U_j = \{0\} $. 
+	Then, the dimension of $ U_1 + ... + U_m $ is just the sum of the individual dimensions. 
+	That is, $ \dim (U_1 + ... + U_m) =  \dim U_1 + ... + \dim U_m $. 
+	Now, consider that the subspaces are not disjoint. 
+	Then, we will have to subtract the intersectin of the subspaces from our previous result.
+	So, the valuse for the dimension will be less. 
+	Thus, we get the inequality
+	$ \dim (U_1 + ... + U_m) \leq  \dim U_1 + ... + \dim U_m $.  
+	It follows, that the sum is finite dimensional, since it is a finite sum of finite dimensions. 
 \end{q}
 
 \end{document}
