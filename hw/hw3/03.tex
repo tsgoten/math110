@@ -48,13 +48,41 @@ headpunct=:]
 	So, $ U = \vspan{B} = V $.
 \end{q}
 \begin{q}[7]
-	
+	We have the obvious polynomial $ 1 $, which will always be the same. 
+	Then, we can construct a polynomial $ (x - 2)(x-5)(x-6) $ which is always 0 for $2, 5, 6 $. 
+	Additionally, we can multiply by $ x $ to get $ x(x-2)(x-5)(x-6) $ which is also always equal to 0 for the following values. 
+	Now, we have to show that they are linearly independent, which follows from the fact that they all have different degrees of $ 0, 3, 4 $ respectively. 
+	So, they are linearly independent. Therefore, we have a basis for $ U $. 
+	We use a similar argument from HW2.A.17 where we were able to show that the dimension is one less, when we restricted one value. 
+	So, if we restrict the three terms it has at most dimension from 5 to 3. So, we only need to show three vectors to form a basis.
+	Now, if we add in $ x, x^2 $ we can uniquely express all the elements in $ \poly{4}{\F} $ as a linear combination of those vectors, 
+	thus it forms a basis for $ \poly{4}{\F} $.
+	We just wish to find a subspace where $ p(5) \neq p(6) $ or $ p(6)\neq p(2) $ or $ p(2) \neq p(5) $ with this restriction we find every polynomial not in $ U $. 
+	Thus, the intersection is as desired and $ U \oplus W \poly{4}{\F} $.
 \end{q}
 \begin{q}[8]
-	
+	Observe that all polynomials that satisfy the condition that the integeral form -1 to 1 of the polynomial is zero 
+	must be odd, that is $ f(-x) = -f(x) $. 
+	We also know that odd polynomials only have odd degree terms. 
+	That is, $ U \in \vspan{x, x^3} $.
+	Then, we just add the remaining polynomials from the standard basis to get a basis for $ \poly{4}{\R} $.
+	So, we define $ W = \vspan{1, x^2, x^4} $ such that they form a direct sum. 
+	We know this is the case since they are linearly independent.
+	We also know the intersectin is clearly $ \{0\} $.
+	Additionally, the sum of the standard basis is the definition for every $ p \in \poly{4}{\R} $.
+	Namely $ W $ is the even polynomials.
 \end{q}
 \begin{q}[9]
-	
+	We know that if $ W $ is an infinite dimensional set then there exist $ n $ sized independent lists for any positive integer $ n $. 
+	That is, $ w_1, ..., w_n $.
+	This shows that we can have a valid linear map $ T: V \to W $ by 3.5. 
+	Suppose we have that $ a_1 T_1 + ... + a_n T_n = 0 $. 
+	Then we can add the linear pairs to get zero linear pair. 
+	That is, 
+	$ (a_1 T_1 + ... + a_n T_n)(v) = 0 $
+	Then we select $ T_i v $ such that $ T_i v = w_i $. 
+	So, we then have a linear combination $ a_1 w_1 + ... + a_n w_n = 0 $, so the previous linear combinaiton is zero as well.
+	This, holds for all real numbers $ n$ so by the previous argument there are  infinite linear maps since there are infinite linearly independent lists in $ \mathcal{L} (V, W) $.
 \end{q}
 \begin{q}[10]
 	We begin by showing that $ p_0,..., p_m $ is a linearly independent list. 	
@@ -153,10 +181,35 @@ headpunct=:]
 	Since, every $ v $ has a linar map $ Tv $, we have found a $ T $ that satsifies our condition.
 \end{q}
 \begin{q}[12]
+	We know that if $ W $ is an infinite dimensional set then there exist $ n $ sized independent lists for any positive integer $ n $. 
+	That is, $ w_1, ..., w_n $.
+	This shows that we can have a valid linear map $ T: V \to W $ by 3.5. 
+	Suppose we have that $ a_1 T_1 + ... + a_n T_n = 0 $. 
+	Then we can add the linear pairs to get zero linear pair. 
+	That is, 
+	$ (a_1 T_1 + ... + a_n T_n)(v) = 0 $
+	Then we select $ T_i v $ such that $ T_i v = w_i $. 
+	So, we then have a linear combination $ a_1 w_1 + ... + a_n w_n = 0 $, so the previous linear combinaiton is zero as well.
+	This, holds for all real numbers $ n$ so by the previous argument there are  infinite linear maps since there are infinite linearly independent lists in $ \mathcal{L} (V, W) $.
 
 \end{q}
 \begin{q}[14]
-	Let $ V = \poly{3}{\R} $, which we know has dimension 
+	Let $ V = \R^2 $, which we know has dimension 2, which is $ \geq 2 $. 
+	The let $ T $ be a linear map that for $ v \in \R^2 $ such that $ v = (x, y)$, 
+	we will have $ Tv = (y, x) $. 
+	We know this satisfies additivity and homogeneity since any $ (y, x) \in \R^2 $ is in a Vector space which is closed under vector addition and scalar multiplication.
+	Additoinally we know from teh notes that $ (2x, 2y) $ is also a valid vector space. 
+	Therefore, we can construct a linear map $ S $
+	such that $ Sv = (2x, 2y) $. 
+	Then. note by the previous argument that $S$ must satisfy additivity and homogeneity. 
+	We then see that $ S(Tv) = S(y, x) = (2y, 2x) $, 
+	Additionally, we can contruct the opposite argument that 
+	$ T(Sv) = T(y, x) = (y, x)$. 
+	So, if we multiply the last expression by 2 we get
+	$ 2T(Sv) 2= T(y, x) = 2(y, x) = (2y, 2x) $
+	So we equate first two expressions in each equation to get 
+	$ S(Tv) = 2T(Sv) $ 
+	So, we have shown that there exist linear maps $ S, T $ such that $ ST \neq TS $. 
 \end{q}
 
 \section{Exercises 3.B}
@@ -193,7 +246,15 @@ headpunct=:]
 	So, we have shown that $ (ST)^2 = 0 $, since it maps all $ v $ to 0. 
 \end{q}
 \begin{q}[5]
-
+	Let $ T $ be the linear map that takes the first two indices and moves them to the last two, and sets the first two to zero. 
+	That is, for $ x \in \R^4 $ such that $ x = (x_1, x_2, x_3, x_4) $ we have that 
+	$$ Tx = (0, 0, x_1, x_2) $$ 
+	By the exact same arguments as \textbf{Problem 1} we know that $ T $ is a valid linear map. 
+	Observe, that the range of $ T $ is given by the standard basis vectors $ (0, 0, 1, 0), (0, 0, 0, 1) $. 
+	So, it is that $ \range T = \vspan{(0, 0, 1, 0), (0, 0, 0, 1) } $. 
+	We also know that these are the exact basis for the null space, since any $ v \in \vspan{(0, 0, 1, 0), (0, 0, 0, 1)} $ 
+	Already, has zeros in the first two indices, so after the linear map it will have zeros in all the indices. Therefore it is in the $ \nul T $. 
+	Since, the same basis define the following it must be that $ \nul T = \range T $. 
 \end{q}
 \begin{q}[6]
 	We know that $$ \dim V = \dim \range	T + \dim \nul T $$
