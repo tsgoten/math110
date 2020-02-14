@@ -112,5 +112,34 @@ headpunct=:]
 	That is, $ a_1 = ... = a_m = 0 $. 
 	So, we have shown that $ v_1, ..., v_m $ are linearly independent. 
 \end{q}
+\begin{q}[8]
+	We will define $ \varphi: \R^2 \to \R $ as follows, 
+	\[ \varphi (x, y) = \sqrt{x^2 + y^2} \]
+	Notice that $ \varphi(a(x, y)) = \varphi(ax, ay) = \sqrt{a^2x^2 + a^2y^2} = a \sqrt{x^2 + y^2} $ by the definition of scalar multplication on $ \R^2 $.
+	Also, $\varphi(x, y) = a\sqrt{x^2 + y^2}$ showing that $ \varphi $ satisfies the condition.
+	Consider the vectors $ (1, 0) $ and $ (0, 1) $. 
+	We know that $ (1, 0) + (0, 1) = (1, 1) $. 
+	But $ \varphi $ does not satisfy additivity since 
+	$ \varphi (1, 0) = 1 = \varphi (0, 1) $, but $ \varphi(1, 1) = \sqrt{2} $ and we know that $ 2 \neq \sqrt{2} $.
+\end{q}
+\begin{q}[9]
+	We will define $ \varphi: \C \to \C $ as follows, 
+	$$ \varphi(a + bi) = a $$ 
+	We can show that for some $ w = w_1 + w_2i $ and $ z = z_1+ z_2i $, our function respects additivity.
+	$$ \varphi(w + z) = \varphi(w_1 + z_1 + (w_2 + z_2)i) = w_1 + z_1 = \varphi(w) + \varphi(z) $$
+	Then, if we select the scalar $ i \in \C $ we observe that $ \varphi(iz) = -z_2 \neq i\varphi(z) = z_1i $. 
+	Thus, it does not satisfy homogeneity. 
+\end{q}
+\begin{q}[10]
+	Let $ u \in U $ be a vector such that it does not map to 0, that is $ Su \neq 0 $. 
+	Now, select a $ v \in V $ such that $ v \not\in U $. 
+	We can choose such a $ v $, because $ U \neq V $ and $ U $ is a subspace of $ V $. 
+	We know that $ v + u \not\in U $, since if it were, then there is a $ w \in U $ such that $ w = v + u $, 
+	and $ w - u = v $. 
+	Since, $ U $ is closed under addition that would mean that $ v \in U $ which is a contradiction. 
+	Finally, if we apply the linear map we get that 
+	$$ T(u + v)	 = 0 \neq Tu + Tv = Su + 0 $$
+	Since, we initially stated that that $ Su \neq 0 $, it must be the case that $ T $ does not respect additivity and is not a linear map. 
+\end{q}
 
 \end{document}
