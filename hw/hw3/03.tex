@@ -73,16 +73,13 @@ headpunct=:]
 	Namely $ W $ is the even polynomials.
 \end{q}
 \begin{q}[9]
-	We know that if $ W $ is an infinite dimensional set then there exist $ n $ sized independent lists for any positive integer $ n $. 
-	That is, $ w_1, ..., w_n $.
-	This shows that we can have a valid linear map $ T: V \to W $ by 3.5. 
-	Suppose we have that $ a_1 T_1 + ... + a_n T_n = 0 $. 
-	Then we can add the linear pairs to get zero linear pair. 
-	That is, 
-	$ (a_1 T_1 + ... + a_n T_n)(v) = 0 $
-	Then we select $ T_i v $ such that $ T_i v = w_i $. 
-	So, we then have a linear combination $ a_1 w_1 + ... + a_n w_n = 0 $, so the previous linear combinaiton is zero as well.
-	This, holds for all real numbers $ n$ so by the previous argument there are  infinite linear maps since there are infinite linearly independent lists in $ \mathcal{L} (V, W) $.
+	We observe that since $ W \in V $, then $ w $ is equal to some linear combination of the basis of $ V $. 
+	Let $ v_1 ,..., v_m $ be the basis of $ V $.  
+	Observe that we can select a $ w $ such that $ w = -v_1 - ...-v_m $. 
+	So, then we have the zero vector which is zero for non zero coefficients, so then the list must be linearly dependent.
+	We can always remove vectors from a linearly dependent list to eventually get a linearly independent list, 
+	which will have length equivalent to the dimension. 
+	Therefore, the dimension is less than $ m $ , that is $ \geq m -1 $. 
 \end{q}
 \begin{q}[10]
 	We begin by showing that $ p_0,..., p_m $ is a linearly independent list. 	
