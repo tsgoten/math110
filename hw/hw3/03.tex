@@ -1,7 +1,6 @@
-
 \documentclass[10pt, twocolumn]{article}
 \author{Tarang Srivastava}
-\usepackage{amsmath, amssymb, amsthm, chngcntr, enumitem, multirow, thmtools, xcolor}
+\usepackage{amsmath, amssymb, amsthm, commath, chngcntr, enumitem, multirow, thmtools, xcolor}
 \usepackage{graphicx}
 \usepackage[margin=.25in]{geometry}
 \setlength{\columnsep}{.5in}
@@ -10,7 +9,8 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\mathbb{N}}
-\newcommand{\vspan}{\text{span}}
+\newcommand{\poly}{\mathcal{P}_{m}\left(\F\right)}
+\newcommand{\vspan}[1]{\text{span}\left(#1\right)}
 \newcommand{\inv}[1]{#1^{-1}}
 \newcommand{\todo}[1]{\textcolor{red}{TODO: #1} \\}
 \newcommand{\makechaptertitle}[1]{
@@ -38,5 +38,36 @@ headpunct=:]
 \begin{document}
 	
 \makechaptertitle{Math 110 Homework 3}
+
+\section{Exercises 2.C}
+\begin{q}[Problem 1]
+	Since, $ U $ is a subspace there exists a basis $ B $ such that $ \abs{B} = \dim U = \dim V$.
+	We have that $ B $ is a linearly independent list in $ V $ and of the right length therefore it must be a basis of $ V $.
+	So, $ U = \vspan{B} = V $.
+\end{q}
+\begin{q}[Problem 7]
+	
+\end{q}
+\begin{q}[Problem 8]
+	
+\end{q}
+\begin{q}[Problem 9]
+	
+\end{q}
+\begin{q}[Problem 10]
+	We begin by showing that $ p_0,..., p_m $ is a linearly independent list. 	
+	Observe, that any linear combination of $ p_0,..., p_m $ is a polynomial of degree $ m $. 
+	So, the only polynomial of degree $ m $ that is the $ 0 $ polynomial is the one with all zero coefficients. 
+	Thus, $ p_0,..., p_m $ is a linearly independent list. 
+	Since, it is of the right length $ m + 1 $, and for all $ 0 \leq i \leq m $, $ p_i $ is in $ \poly $.
+	Then, it must be a basis for $ \poly $.
+\end{q}
+\begin{q}
+	Assume for contradiction that $ U \cap W = \{0\}$.
+	Then, $ U + W $ is a direct sum, and $ U, W \subset V $. 
+	So, it must be that $ U \oplus W = V $. 
+	Thereofre, $ \dim V = 9 = \dim W + \dim U - \dim W \cap U = 5 + 5 - 0 $. 
+	Here we have a contradiction, thus, $ U \cap W \neq \{0\} $.
+\end{q}
 
 \end{document}
