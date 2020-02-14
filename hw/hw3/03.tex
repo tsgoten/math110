@@ -9,10 +9,12 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\mathbb{N}}
-\newcommand{\poly}{\mathcal{P}_{m}\left(\F\right)}
+\newcommand{\poly}[2]{\mathcal{P}_{#1}\left(#2\right)}
 \newcommand{\vspan}[1]{\text{span}\left(#1\right)}
 \newcommand{\inv}[1]{#1^{-1}}
 \newcommand{\todo}[1]{\textcolor{red}{TODO: #1} \\}
+\newcommand{\nul}{\text{null }}
+\newcommand{\range}{\text{range }}
 \newcommand{\makechaptertitle}[1]{
 \begin{center}
 	\begin{large}
@@ -59,8 +61,8 @@ headpunct=:]
 	Observe, that any linear combination of $ p_0,..., p_m $ is a polynomial of degree $ m $. 
 	So, the only polynomial of degree $ m $ that is the $ 0 $ polynomial is the one with all zero coefficients. 
 	Thus, $ p_0,..., p_m $ is a linearly independent list. 
-	Since, it is of the right length $ m + 1 $, and for all $ 0 \leq i \leq m $, $ p_i $ is in $ \poly $.
-	Then, it must be a basis for $ \poly $.
+	Since, it is of the right length $ m + 1 $, and for all $ 0 \leq i \leq m $, $ p_i $ is in $ \poly{m}{\F} $.
+	Then, it must be a basis for $ \poly{m}{\F} $.
 \end{q}
 \begin{q}[12]
 	Assume for contradiction that $ U \cap W = \{0\}$.
@@ -151,7 +153,56 @@ headpunct=:]
 	Since, every $ v $ has a linar map $ Tv $, we have found a $ T $ that satsifies our condition.
 \end{q}
 \begin{q}[12]
-			
+
+\end{q}
+\begin{q}[14]
+	Let $ V = \poly{3}{\R} $, which we know has dimension 
+\end{q}
+
+\section{Exercises 3.B}
+\begin{q}[1]
+	Let $ T $ be a linear map from $ \R^5 \to \R^5 $ such that for some $ x \in \R^5 $, 
+	where $ x = (x_1, x_2, x_3, x_4, x_5) $.
+	$$ Tx = (0, 0, 0, x_4, x_5) $$
+	First, we wish to show that $ T $ is in fact a linear map. 
+	For additivity, we know 
+	$$ T(x + y) = T(x_1 + y_1, ..., x_5 + y_5) = (0, 0, 0, x_4 + y_4, x_5 + y_5)$$
+	For the other part we have that 
+	$$ T(x) + T(y) = (0, 0, 0, x_4, x_5) + (0, 0, 0, y_4, y_5) $$ 
+	$$ = (0, 0, 0, x_4 + y_4, x_5 + y_5) $$
+	Therefore, additivity holds.
+	For homogeneity we simply show again that 
+	$$ T(cx) = T(cx_1, ..., cx^5) = (0, 0, 0, cx_4, cx_5) $$
+	So, then for the other part
+	$$ cT(x) = c (0, 0, 0, x_4, x_5) =(0, 0, 0, cx_4, cx_5) $$
+	Therefore, showing homogeneity holds as well. 
+	So, $ T $ is a valid linear map.
+	It follows quite easily now that the null space is all the elements with zeros in the last two indices. 
+	That is $$ \nul T = \vspan{(1, 0, 0, 0, 0 ), (0, 1, 0, 0, 0), (0, 0, 1, 0, 0)} $$ 
+	These, are all elements of the standard basis of $ \R^5 $ so they are linearly independent and therefore form a basis for $ \nul T $.
+	So, we have shown that the null space has dimension 3. We know $ \R^5 $ has dimension 5, so it follows that the range has dimension 2, 
+	but again that is not very hard to show, but not necessary in this case by 3.22.
+\end{q}
+\begin{q}[2]
+	Observe that $ S, T $ are both  maps from $ V \to V $ so performing $ (ST)^2 = STST $ is completely valid.
+	For any $ v \in V $ if $ Tv = 0 $ or $ Sv = 0 $ we are immediately done, since $ S $ and $ T $ are linear maps and must always map 0 to 0, 
+	so after the chain of linear maps we will have 0 at the end. 
+	To the more interesting part, we first get that $ Ts \neq 0 $. 
+	We are concerned about when $ S(Ts) \in \text{range } S$, because we showed the other case just leads to 0.
+	Then, since $ \text{ range} S \subset \nul T $ it must be then that $ T(S(Ts)) = 0 $. 
+	So, we have shown that $ (ST)^2 = 0 $, since it maps all $ v $ to 0. 
+\end{q}
+\begin{q}[5]
+
+\end{q}
+\begin{q}[6]
+	We know that $$ \dim V = \dim \range	T + \dim \nul T $$
+	Assume for contradiction that $ \dim \range	T = \dim \nul T $, 
+	so we can make the following substitutions and get 
+	$$ 5 = 2 \dim \range T $$
+	Here we have a contradiction since it claims that $ \dim \range T = \frac{5}{2} $, 
+	but a dimensions is the length of a basis so must always be a natural number. 
+	So, it must be that for $ \R^5 $ the range and null space always have unequal dimensions.
 \end{q}
 
 \end{document}
