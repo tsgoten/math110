@@ -90,7 +90,27 @@ headpunct=:]
 \end{q}
 \section{Exercises 3.A}
 \begin{q}[3]
-		
+	Observe that that for the standard basis $ \F^n $, 
+	we can arrive at the following scalars 
+	\begin{align*}
+		T(1, ..., 0) &= (A_{1, 1}, A_{2, 1}, ..., A_{m, 1}) \\
+		& \vdots \\
+		T(0, ..., 1) &= (A_{1, n}, A_{2, n}, ..., A_{m, n})
+	\end{align*}
+	Then, by theorem 3.5 there exists a linear map $ T: V \to W $. 
+	Since, we can multiply by some scalar $ x_i $ for $ i = 1, ..., n $ and then add those such vectors. 
+	We can claim that, 
+	$$ T(x_1, ..., x_n ) =  (A_{1, 1}x_1 + ... + A_{1, n}x_n, ..., A_{m, 1}x_1 + ...+ A_{m, n} x_n) $$
+	by the additivity of linear maps. 
+\end{q}
+\begin{q}[4]
+	To show linear independence consider the aribitrary linear combination equal to zero
+	$$ 0 = a_1v_1 + ... + a_m v_m $$
+	By the additivity and homogeneity properties we have 
+	$$ T(0) = 0 = T(a_1v_1 + ... + a_m v_m) = a_1Tv_1 + ... + a_mTv_m $$
+	Then, since we know $ Tv_1, ..., Tv_m $ is linearly independent it must be the case that all the coefficients are zero. 
+	That is, $ a_1 = ... = a_m = 0 $. 
+	So, we have shown that $ v_1, ..., v_m $ are linearly independent. 
 \end{q}
 
 \end{document}
