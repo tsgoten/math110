@@ -1,0 +1,56 @@
+\documentclass{article}
+\author{SBHS Science Olympiad, Gold}
+\usepackage[margin=0in, landscape]{geometry}
+\setlength{\columnsep}{.05in}
+\usepackage{amsmath, amssymb, amsthm, commath, chngcntr, enumitem, multicol, multirow, thmtools, xcolor}
+\usepackage{graphicx, wrapfig, float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ebgaramond}
+\usepackage{soul}
+% Symbols
+\newcommand{\ddd}{$\bullet$}
+% Colors
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\pink}[1]{\textcolor{magenta}{#1}}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+% Headings
+% Note: The order of importance is the ROYGBV
+\newcommand{\mysection}[1]{\colorbox{yellow}{{\textbf{\textbf{\textit{\red{#1}}}}}}}
+\newcommand{\mysub}[1]{\underline{\textbf{{\textit{\orange{#1}}}}}}
+\newcommand{\mysubsub}[1]{{{\green{#1}}}}
+\newcommand{\mysubsubsub}[1]{{{\blue{#1}}}}
+\newcommand{\vocab}[1]{{\pink{#1}}}
+% Pictures
+\newcommand{\fig}[1]{
+	\includegraphics[width=\columnwidth]{#1}
+}
+\newcommand{\figwidth}[2]{
+	%file, width
+	\includegraphics[width=#2cm]{#1}
+}
+\newcommand{\figtwo}[2]{
+	%file, width
+	\includegraphics[width=.5 \linewidth]{#1}
+	\includegraphics[width=.5 \linewidth]{#2}
+}
+\newcommand{\figwrap}[1]{
+	%file, width, height, side
+	\begin{wrapfigure}{r}{0.5\textwidth}
+		\begin{center}
+			\includegraphics[width=0.48\textwidth]{#1}
+		\end{center}
+	\end{wrapfigure}
+}
+
+\begin{document}
+	% Uncomment the line below to modify the font size
+	 \small
+	%  \tiny
+    \begin{multicols*}{4}
+        hi
+	\end{multicols*}
+\end{document}
