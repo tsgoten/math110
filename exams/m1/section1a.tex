@@ -15,4 +15,81 @@ $$
 $$
 here $a, b, c, d \in \mathbf{R}$ \\
 
-\thrm{Properties of complex arithmetic}
+\thrm{Properties of complex arithmetic} \\
+commutativity
+\begin{align*}
+\alpha+\beta=\beta+\alpha \text { and } \alpha \beta=\beta \alpha \text { for all } \alpha, \beta \in \mathbf{C}
+\end{align*}
+associativity
+\begin{align*}
+(\alpha+\beta)+\lambda=\alpha+(\beta+\lambda) \text { and }(\alpha \beta) \lambda=\alpha(\beta \lambda) \text { for all } \alpha, \beta, \lambda \in \mathbf{C}
+\end{align*}
+identities
+\begin{align*}
+\lambda+0=\lambda \text { and } \lambda 1=\lambda \text { for all } \lambda \in \mathbf{C}
+\end{align*}
+additive inverse for every $\alpha \in \mathbf{C},$ there exists a unique $\beta \in \mathbf{C}$ such that $\alpha+\beta=0$ \\
+multiplicative inverse for every $\alpha \in \mathbf{C}$ with $\alpha \neq 0,$ there exists a unique $\beta \in \mathbf{C}$ such that $\alpha \beta=1$ \\
+distributive property
+\begin{align*}
+\lambda(\alpha+\beta)=\lambda \alpha+\lambda \beta \text { for all } \lambda, \alpha, \beta \in \mathbf{C}
+\end{align*}
+
+\defi{$ - \alpha $, subtraction, $ 1/ \alpha $, division}
+Let $\alpha, \beta \in \mathbf{C}$
+$\cdot$ Let $-\alpha$ denote the additive inverse of $\alpha .$ Thus $-\alpha$ is the unique complex number such that
+$$
+\alpha+(-\alpha)=0
+$$
+$\cdot$ Subtraction on $\mathrm{C}$ is defined by
+$$
+\beta-\alpha=\beta+(-\alpha)
+$$
+$\cdot$ For $\alpha \neq 0,$ let $1 / \alpha$ denote the multiplicative inverse of $\alpha .$ Thus $1 / \alpha$ is the unique complex number such that
+$$
+\alpha(1 / \alpha)=1
+$$
+$\cdot$ Division on $\mathbf{C}$ is defined by
+$$
+\beta / \alpha=\beta(1 / \alpha)
+$$
+
+\defi{list, length}
+Suppose $n$ is a nonnegative integer. A list of length $n$ is an ordered collection of $n$ elements (which might be numbers, other lists, or more abstract entities) separated by commas and surrounded by parentheses. A list of length $n$ looks like this:
+$$
+\left(x_{1}, \ldots, x_{n}\right)
+$$
+Two lists are equal if and only if they have the same length and the same elements in the same order.
+
+\defi{$\F^n$}
+$\mathbf{F}^{n}$ is the set of all lists of length $n$ of elements of $\mathbf{F}:$
+$$
+\mathbf{F}^{n}=\left\{\left(x_{1}, \ldots, x_{n}\right): x_{j} \in \mathbf{F} \text { for } j=1, \ldots, n\right\}
+$$
+For $\left(x_{1}, \ldots, x_{n}\right) \in \mathbf{F}^{n}$ and $j \in\{1, \ldots, n\},$ we say that $x_{j}$ is the $j^{\text {th }}$ coordinate of $\left(x_{1}, \dots, x_{n}\right)$
+
+\defi{addition in $\F^n$}
+Addition in $\mathbf{F}^{n}$ is defined by adding corresponding coordinates:
+$$
+\left(x_{1}, \ldots, x_{n}\right)+\left(y_{1}, \ldots, y_{n}\right)=\left(x_{1}+y_{1}, \ldots, x_{n}+y_{n}\right)
+$$
+
+\thrm{Commutativity of addition in $ \F^n $}
+If $x, y \in \mathbf{F}^{n},$ then $x+y=y+x$
+
+\defi{0}
+Let 0 denote the list of length $n$ whose coordinates are all 0 :
+$$
+0=(0, \ldots, 0)
+$$
+
+\defi{additive inverse in $ \F^n $}
+For $x \in \mathbf{F}^{n},$ the additive inverse of $x,$ denoted $-x,$ is the vector $-x \in \mathbf{F}^{n}$ such that $x+(-x)=0$
+In other words, if $x=\left(x_{1}, \ldots, x_{n}\right),$ then $-x=\left(-x_{1}, \ldots,-x_{n}\right)$
+
+\defi{scalar multiplication in $ \F^n $}
+The product of a number $\lambda$ and a vector in $\mathbf{F}^{n}$ is computed by multiplying each coordinate of the vector by $\lambda$ :
+$$
+\lambda\left(x_{1}, \ldots, x_{n}\right)=\left(\lambda x_{1}, \ldots, \lambda x_{n}\right)
+$$
+here $\lambda \in \mathbf{F}$ and $\left(x_{1}, \ldots, x_{n}\right) \in \mathbf{F}^{n}$
