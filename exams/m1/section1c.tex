@@ -1,1 +1,32 @@
 \mysection{Section 1.C -- Subspaces} \\
+
+\defi{Subspace}
+A subset $U$ of $V$ is called a subspace of $V$ if $U$ is also a vector space (using the same addition and scalar multiplication as on $V$ ).
+
+\thrm{Conditions for a subspace}
+A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies the following three conditions:
+additive identity
+$0 \in U$
+closed under addition $u, w \in U$ implies $u+w \in U$
+closed under scalar multiplication
+$a \in \mathbf{F}$ and $u \in U$ implies $a u \in U$
+
+\defi{sum of subsets}
+Suppose $U_{1}, \ldots, U_{m}$ are subsets of $V .$ The sum of $U_{1}, \ldots, U_{m},$ denoted $U_{1}+\cdots+U_{m},$ is the set of all possible sums of elements of $U_{1}, \ldots, U_{m}$ More precisely,
+$$
+U_{1}+\cdots+U_{m}=\left\{u_{1}+\cdots+u_{m}: u_{1} \in U_{1}, \ldots, u_{m} \in U_{m}\right\}
+$$
+
+\thrm{Sum of subspaces is the smalles containing subspace}
+Suppose $U_{1}, \ldots, U_{m}$ are subspaces of $V .$ Then $U_{1}+\cdots+U_{m}$ is the smallest subspace of $V$ containing $U_{1}, \ldots, U_{m}$
+
+\defi{direct sum}
+Suppose $U_{1}, \ldots, U_{m}$ are subspaces of $V$
+$\cdot$ The sum $U_{1}+\cdots+U_{m}$ is called a direct sum if each element of $U_{1}+\cdots+U_{m}$ can be written in only one way as a sum $u_{1}+\cdots+u_{m},$ where each $u_{j}$ is in $U_{j}$
+$\cdot$ If $U_{1}+\cdots+U_{m}$ is a direct sum, then $U_{1} \oplus \cdots \oplus U_{m}$ denotes $U_{1}+\cdots+U_{m},$ with the $\oplus$ notation serving as an indication that this is a direct sum.
+
+\thrm{Condition for a direct sum}
+Suppose $U$ and $W$ are subspaces of $V .$ Then $U+W$ is a direct sum if and only if $U \cap W=\{0\}$
+
+\thrm{Direct sum of two subspaces}
+Suppose $U$ and $W$ are subspaces of $V .$ Then $U+W$ is a direct sum if and only if $U \cap W=\{0\}$
