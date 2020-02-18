@@ -2,7 +2,7 @@
 % Tarang Srivastava
 \documentclass{article}
 \author{Tarang Srivastava}
-\usepackage[margin=0in, landscape]{geometry}
+\usepackage[margin=.05in, landscape]{geometry}
 \setlength{\columnsep}{.05in}
 \usepackage{amsmath, amssymb, amsthm, commath, chngcntr, enumitem, multicol, multirow, thmtools, xcolor}
 \usepackage{graphicx, wrapfig, float}
@@ -10,6 +10,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{ebgaramond}
 \usepackage{soul}
+% Settings
+\setlength{\parindent}{0pt}
 % Symbols
 \newcommand{\ddd}{$\bullet$}
 % Colors
@@ -33,8 +35,8 @@
 \newcommand{\range}{\text{range }}
 % Headings
 \newcommand{\mysection}[1]{\colorbox{yellow}{{\textbf{\textbf{\textit{\red{#1}}}}}}}
-\newcommand{\mysub}[1]{\underline{\textbf{{\textit{\orange{#1}}}}}}
-\newcommand{\mysubsub}[1]{{{\green{#1}}}}
+\newcommand{\defi}[1]{{\textbf{{\textit{\orange{#1:}}}}}}
+\newcommand{\thrm}[1]{{\textbf{{\textit{\blue{#1:}}}}}}
 \newcommand{\mysubsubsub}[1]{{{\blue{#1}}}}
 \newcommand{\vocab}[1]{{\pink{#1}}}
 % Pictures
