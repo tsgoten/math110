@@ -9,12 +9,15 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\LinearMap}[2]{\mathcal{L}(#1, #2)}
 \newcommand{\poly}[2]{\mathcal{P}_{#1}\left(#2\right)}
 \newcommand{\vspan}[1]{\text{span}\left(#1\right)}
 \newcommand{\inv}[1]{#1^{-1}}
 \newcommand{\todo}[1]{\textcolor{red}{TODO: #1} \\}
 \newcommand{\nul}{\text{null }}
+\newcommand{\nullity}{\text{nullity }}
 \newcommand{\range}{\text{range }}
+\newcommand{\rank}{\text{rank }}
 \newcommand{\makechaptertitle}[1]{
 \begin{center}
 	\begin{large}
@@ -39,6 +42,45 @@ headpunct=:]
 
 \begin{document}
 	
-\makechaptertitle{Math 110 Homework 3}
+\makechaptertitle{Math 110 Homework 4}
+
+\section{Exercies 3.B}
+\begin{q}[7]
+    Given that $ T $ is injective. 
+    For two unique vectors $ v, u \in V $. 
+    
+\end{q}
+
+\begin{q}[15]
+    Assume for contradiction that $ T $ is a valid linear map. 
+    Given that $ T $ is a map $ T: \R^5 \to \R^2$, we must have that $ \rank T = 2 $ and $ \nullity T = 3 $. 
+    By 
+    $$ \dim \R^5 = 5 = \rank + \nullity = 2 + 3 $$
+    We then observe that the null space defined as follows
+    has dimension 2. 
+    $$\left\{\left(x_{1}, x_{2}, x_{3}, x_{4}, x_{5}\right) \in \mathbf{F}^{5}: x_{1}=3 x_{2} \text { and } x_{3}=x_{4}=x_{5}\right\}$$
+    We claim that the vectors $ (3, 1, 0, 0, 0), (0, 0, 1, 1, 1) $ span the null space. 
+    Observe for some arbitrary coefficients $ a, b \in \F $ the linear combination of the vectors 
+    $ a(3, 1, 0, 0, 0) + b(0, 0, 1, 1, 1) = (3a, a, b, b, b)$. 
+    This holds the required property that $ 3x_2 = x_1 $ and that $ x_3 = x_4 = x_5 $. 
+    Thus, it spans our null space and we have a contradiction, since we found a spanning list that has length less than a linearly independent list.  
+\end{q}
+
+\begin{q}[19]
+    We know that for a linear map $ T \in \LinearMap{V}{W} $ the dimension of the range is less than or equal to the codomain.
+    That is, 
+    $$ \rank T \leq \dim W $$
+    Suppose, this was not the case then we could find a $ v \in V $ such that $ Tv \not \in W $ and that is not a linear map. 
+    Then, we also have that $ \dim \nul T = \dim U $. 
+    It then follows directly that 
+    $$ \dim V = \rank T + \dim \nul T = \rank T + \dim U $$
+    $$ \dim V - \rank T = \dim U $$
+    Therefore, from our first inequality 
+    $$ \dim U \geq \dim V - \dim W $$
+\end{q}
+
+\begin{q}[26]
+    
+\end{q}
 
 \end{document}
