@@ -91,7 +91,11 @@ headpunct=:]
 \end{q}
 
 \begin{q}[26]
-    
+    Firstly, we are given that $ p $ is a nonconstant polynomial, therefore that implies that $ p $ must have degree greater than 0. 
+    So, this satisfies the condition that we will not have negative degrees. 
+    Then, we show that for any polynomial $ p $ we can find a polynomial of greater degree by simply multiplying every value by $ x $. 
+    So, then all the polynomials of degree greater than 0 can be chosen, and if we have an operator that drops the degree by 1, then it must be the case that 
+    the $ \range D = \poly{}{\R} $. So, then it follows that it is surjective by defintion of surjectivity for linear maps.
 \end{q}
 
 \section{Exercises 3.C}
@@ -132,5 +136,86 @@ headpunct=:]
     Then we will be left with a linearly independent list that we can always extend to form a basis of $ W $. 
 \end{q}
 
+\section{Exercises 3.D}
+\begin{q}[3]
+    For the $ \implies $ direction if there exists an invertible operator $ T $, such that $ Tu = Su $, then $ S $ is injective since $ T $ is injective.
+    For the $ \impliedby $ direction since $ S $ is injective we know that for some basis $ u_1, ..., u_m $ of $ U $ we know $ Su_1, ..., Su_m $ is linearly independent. 
+    Then, we can extend $ u_1, ..., u_m $ to form a basis for $ V $. 
+    Then select a $ T \in \LinearMap{V}{V} $ such that $ Tu_i = Su_i $ and for the extra vectors $ Tv = v $. 
+    We make a direct map for these vectors. 
+    Basically, $ Tv = v $. 
+    Then, we are guaranteed that $ T $ is injective and therefore also invertible.  
+\end{q}
+
+\begin{q}[4]
+    For the $ \impliedby $ direction observe that if $ T_1 = ST_2 $, then $ \nul S = \{0\} $. So, essentially all the vectors from $ V $ that mapped to 0, will again map to zero for $ S $.
+    So $ \nul T = \nul S $. 
+    For the $ \implies $ direction if $ \nul T_1 = \nul T_2 $ then we know there exists a linear operator $ S \in \LinearMap{W}{W} $. 
+    We know that for $ v \in \nul T_1, \nul T_2 $ it will map $ T_1v = T_2 v = 0 $. So, then $ T_1 v = ST_2 v $. 
+    Since all linear maps map 0 to 0. 
+    Suppose, $ u \not \in \nul T_1, \nul T_2 $. Then, define $ S $ such that $ ST_2 = T_1 $.  
+    It is straightforward to show that $ S $ is a linear operator since by our construction of $ S $, $ \nul S = \{0\} $, since we require that $ S $ map all nonzero values to a nonzero value. 
+    Then, $ S $ is injective and therefore also invertible.
+\end{q}
+\begin{q}[5]
+    For the $ \impliedby $ direction, if we let $ S $ be the identity linear map, which we know is invertible, then $ T_1 = T_2S = T_2 $. So, clearly they are the same and must have the same range.
+    For the $ \implies $ direction if $ \range T_1 = \range T_2 $ then we know for some $ v, u \in V $ it is the case that $ T_1v = T_2u $. 
+    Then we can define $ S $ such that $ Sv = u $. 
+    Then, $ T_1v = T_2Sv $. 
+    We now are left to show that such a $ S $ is invertible. 
+    Observe, that for all $ u \in V $ there exists a $ v $ such that $ Su = v $. Then, by construction of $ S $ it is surjective. 
+    So, it is also invertible.
+\end{q}
+\begin{q}[7]
+    \textbf{(a)}
+    For all $ u \in V $ such that $ u \neq v $ we proceed by our normal addition and scalar multiplication for some maps $ T, S \in E $. 
+    For $ v $ we have that $ (T+S)(v) = Tv + Sv = 0 + 0 $, so it is closed under addition for all vectors in $ V $. 
+    For some $ \lambda \in \F $ it holds that $ T(\lambda v) = \lambda Tv  = \lambda 0 = 0 $, so it satisfies homogeniety as well. Therefore, it is a subspace. \\
+    \textbf{(b)} 
+    We can start of with $ v $ and construct a basis by extending it for $ V $. 
+    But, observe then that the column for $ v $ will have to be all zeros. 
+    Therefore, the dimension of $ E $ will be $ E = \dim W (1 - \dim V) $. 
+\end{q}
+\begin{q}[9]
+    For the $ \impliedby $ direction it is straightforward that if $ S $ and $ T $ are both invertible then $ TS\inv{S}\inv{T} = TI\inv{T} = I$. 
+    For the other side, $ \inv{T} \inv{S} S T = \inv{T} I T = I $. Therefore, we have found an inverse and it must be invertible.
+    For the $ \implies $ direction we can show that $ \nul T = \{0\} $ and then make a similar argument for $ S $. 
+    Let $ v \in \nul T $, 
+    Then, $ v = \inv{(ST)} (ST)v = 0 $, since after $ Tv $ all the linear maps will map 0 to 0. Therefore,  $ v = 0 $ and we have shown that $ T $ is injective and therefore invertible.
+    We proceed with the exact same argument except we select a $ v $ such that $ Tv \in \nul S $. 
+    By the same argument as before $ S $ is then injective and thus invertible. 
+\end{q}
+\begin{q}[10]
+    $ ST = I $ implies by definiton that $ S = \inv{T} $. Then, we can take the liear map of $ T $ after each following map and get $ TS = T \inv{T} = I $. 
+    We proceed with the exact same argument in the opposite direction to show the if and only if.
+\end{q}
+\begin{q}[16]
+    If $ T $ is a scalar multiple then $ T = \lambda I $. 
+    It directly follows then that $ ST = S\lambda I = \lambda I S = TS $. 
+    We can make the argument that if there is a $ v $ such that that $ STv = TSv $. Then it must be that if $ u = Sv $. Then, $Tu$ 
+    can be considered for $ STu $, but clearly the only linear map that satisfies this is a scalar multiple of the identity map.
+\end{q}
+\begin{q}[19]
+    We know that we can always select a $ p $ such that it has higher degree than $ Tp $ sine we are in infinite dimensions therefore, there for all $ p $ we can always find a $ p' $ such that $ p = Tp' $. 
+    Observe that for this reason it is always surjectve. 
+    Since, $ \range T = \poly{}{\R} $. 
+    For the second part observe that it must be the case that if $ T $ is injective then it must also be invertible therefore $ \inv{T}T p = p $. 
+    Thus, there exists no operation such that you can decrease the degree and still be surjective, so it must be that for all nonzero $ p $ 
+    the statement holds that $ deg Tp = deg p $. 
+\end{q}
+
+\section{Exercises 3.E}
+\begin{q}[7]
+    We know from the definition that $ v + U = x + U $, so if we now given that $ v + U = x + U = x + W $ then it clearly follows that $ U = W $. 
+\end{q}
+\begin{q}[8]
+    Observe for the $ \impliedby $ direction that we begin with $ \lambda v + (1 - \lambda)w $. 
+    We can then do the following algebraic manipulations to get that $ \lambda(v-w) + w \in A $ which is clearly the case and then it must be that it is affine for all $ v, w \in A $ since it is closed, and follows from that. 
+    For the $ \implies $ direction consider that for an affine subset of $ V $ we have that for all $ v $ and $ w $ as in the argument above we can just make the same manipulations in the other direction and show the statement holds.
+\end{q}
+\begin{q}[9]
+    For an affine subsets $ A_1 $ and $ A_2$  it is parrallel to $ V $ then it must be that the intersection of two affine subsets that are both parrallel to $ V $ are parrallel to each other. 
+    Therefore, and intersection will also be parrallel to $ V $ or simply not exist in which case be the empty set. Therefore we have that $A_1 \cap A_2 $ is an affine subset as well (or the empty set). 
+\end{q}
 
 \end{document}
