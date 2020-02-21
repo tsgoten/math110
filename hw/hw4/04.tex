@@ -46,9 +46,20 @@ headpunct=:]
 
 \section{Exercies 3.B}
 \begin{q}[7]
-    Given that $ T $ is injective. 
-    For two unique vectors $ v, u \in V $. 
-    
+    Let $ V $ have dimension 2, and $ W $ have some dimension greater than or equal to 2. 
+    Let $ T $ be a non-injective non-zero linear map $ T: V \to W $. 
+    We know that $ \nul T $ is a subspace of $ V $. 
+    Also, $ \nul T \neq \{0\} $ since it is not injective, 
+    thus $ \dim \nul T > 0 $. 
+    Since, we restricted $ V $ to have dimension 2 and $ \nul T $ is nonzero it must have exactly dimension 1. 
+    There exists a subspace $ U $ of $ V $ such that $ V = \nul T \oplus U $. 
+    Therefore, $ \dim U = 1 $.
+    Let $ S $ be another  non-zero non-injective linear map $ S : V \to W $ such that $ \nul S = U $. 
+    Now we have the case that for $ v \in V $, 
+    $$ (S + T)(v) = Sv + Tv $$
+    But for any non-zero $ v \in V $ it is either in $ \nul S $ or $ \nul T $ but not both. 
+    So, the $ \nul (S + T) = \{0\} $, which means that $ S + T $ is injective. 
+    Therefore, it is not a subspace of $ \LinearMap{U}{V} $ since it is not closed under addition.
 \end{q}
 
 \begin{q}[15]
@@ -82,5 +93,39 @@ headpunct=:]
 \begin{q}[26]
     
 \end{q}
+
+\section{Exercises 3.C}
+\begin{q}[2]
+    For $ \poly{3}{\R} $ let the basis be the following basis $ 1, x, x^2, x^3 $ in this order. 
+    And for $ \poly{2}{\R} $ let the basis be $ 3x^2, 2x, 1 $ for this order. 
+    $ 1, x, x^2, x^3 $ is clearly a basis since it is just the standard basis reorganized, more formally the linear combination will still only be zero for all zero coefficients, since addition is commutative in $ \R $. 
+    For  $ 3x^2, 2x, 1 $ any linear combination is only zero when all the coefficients are zero since each term has a different degree. 
+\end{q}
+\begin{q}[3]
+    We want a matrix that basically has 1s in the diagonal up to the $ \rank T $ and 0s everywhere else. 
+    So, we begin with the $ \nul T $. 
+    We know that $ \nul T $ is a subspace of $ V $. 
+    So let $ t_1, ..., t_m $ be a basis for $ \nul T $. 
+    Then, since $ t_1, ..., t_m $ is a linearly independent list and is less than or equal to the length of the basis of $ V $ we can extend it to form a basis of $ V $.
+    Note that $ \nullity T = m $
+    Let $ v_1, ..., v_n $ be the addtional vectors we add to extend our list to be a basis of $ V $. 
+    Note that $ \rank T = n $. 
+    So, $ t_1, ..., t_m , v_1, ..., v_n $ is a basis of $ V $. 
+    Because we collected all the vectors that are equal to zero we know that $ Tv_i = w_i $ for some $ w_i \in W $ for $ i \in \{1, ..., n\} $. 
+    Now we can show these $ w_1, ..., w_n $ are linearly independent. 
+    We begin with $ a_1w_1 + ... + a_n w_n = 0 $ for some coefficients $ a_i $. 
+    We can substitute the $ Tv_i $ to get $ a_1Tv_1 + ... + a_n Tv_n = 0 $. 
+    Collecting the terms we have $ T(a_1v_1 + ... + a_n v_n) = 0 $. 
+    We know that $ v_1, ..., v_n $ are linearly independent since it is formed by dropping vectors from the basis of $ V $. 
+    Then, $ a_1 v_1 + ... + a_n v_n = 0 $ only when all the coefficients are zero.
+    So, we know all the $ a_i $ are zero, thus $ w_1, ..., w_n $ is linearly independent. 
+    Then we can finally extend $ w_1, ..., w_n $ to form a basis for $ W $. 
+    Now we basically our done since we have shown that we have a basis for which $ Tv_i = w_i $ for $ i \in \{1, ..., \rank T\} $. 
+    So, we can make our desired matrix since everything else is supposed to be zero because it is in the null space. 
+\end{q}
+\begin{q}
+     
+\end{q}
+
 
 \end{document}
