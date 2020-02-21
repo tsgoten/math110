@@ -123,8 +123,13 @@ headpunct=:]
     Now we basically our done since we have shown that we have a basis for which $ Tv_i = w_i $ for $ i \in \{1, ..., \rank T\} $. 
     So, we can make our desired matrix since everything else is supposed to be zero because it is in the null space. 
 \end{q}
-\begin{q}
-     
+\begin{q}[4]
+    In a very roundabout way this question is asking if there is a vector $ v $  in every basis of $ V $ such that for every 
+    $ T \in \LinearMap{V}{W} $ it is that $ Tv = w $ for some $ w $ in the basis of $ W $. 
+    The stright forward case is if for some $ v $ in the basis of $ V $ if $ Tv = 0 $ then put that $ v $ at the start of the basis list, so that the column can be all zeros and satisfy the condition.
+    The second also straight forward case if if for some $ v $ in the basis of $ V $ we happen to have a basis for $ W $ such that $ Tv = w $ for $ w $ in the basis, then we are done as well, by moving both $ v $ and $ w $ to start of their respective basis lists.
+    The last case is we can always construct a basis such that the condition is met, by just adding $ Tv = w $ to the basis of $ W $ and then removing all the vectors that are multiples of $ w $. 
+    Then we will be left with a linearly independent list that we can always extend to form a basis of $ W $. 
 \end{q}
 
 
