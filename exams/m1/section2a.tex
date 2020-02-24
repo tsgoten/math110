@@ -1,0 +1,59 @@
+\mysection{Section 2.A Span and Linear Independence}
+
+\defi{Span}
+The set of all linear combinations of a list of vectors $v_{1}, \ldots, v_{m}$ in $V$ is called the span of $v_{1}, \ldots, v_{m},$ denoted $\operatorname{span}\left(v_{1}, \ldots, v_{m}\right) .$ In other words,
+$$
+\operatorname{span}\left(v_{1}, \ldots, v_{m}\right)=\left\{a_{1} v_{1}+\cdots+a_{m} v_{m}: a_{1}, \ldots, a_{m} \in \mathbf{F}\right\}
+$$
+The span of the empty list ( ) is defined to be $\{0\} .$
+
+\thrm{Span is the smallest containing subspace}
+The span of a list of vectors in $V$ is the smallest subspace of $V$ containing all the vectors in the list.
+
+\defi{spans}
+If $\operatorname{span}\left(v_{1}, \ldots, v_{m}\right)$ equals $V,$ we say that $v_{1}, \ldots, v_{m}$ spans $V$
+
+\defi{finite-dimensional vector space}
+A vector space is called finite-dimensional if some list of vectors in it spans the space.
+
+\defi{polynomial over a field F}
+A function $p: \mathbf{F} \rightarrow \mathbf{F}$ is called a polynomial with coefficients in $\mathbf{F}$ if there exist $a_{0}, \ldots, a_{m} \in \mathbf{F}$ such that
+$$
+p(z)=a_{0}+a_{1} z+a_{2} z^{2}+\cdots+a_{m} z^{m}
+$$
+for all $z \in \mathbf{F}$. 
+$\mathcal{P}(\mathbf{F})$ is the set of all polynomials with coefficients in $\mathbf{F}$.
+
+\defi{degree of a polynomial}
+$\cdot$ A polynomial $p \in \mathcal{P}(\mathbf{F})$ is said to have degree $m$ if there exist scalars $a_{0}, a_{1}, \ldots, a_{m} \in \mathbf{F}$ with $a_{m} \neq 0$ such that
+$$
+p(z)=a_{0}+a_{1} z+\cdots+a_{m} z^{m}
+$$
+for all $z \in \mathbf{F} .$ If $p$ has degree $m,$ we write deg $p=m$ \\
+$\cdot$ The polynomial that is identically 0 is said to have degree $-\infty$.
+
+\defi{$ \poly{m}{\F} $}
+For $m$ a nonnegative integer, $\mathcal{P}_{m}(\mathbf{F})$ denotes the set of all polynomials with coefficients in $\mathbf{F}$ and degree at most $m .$
+
+\defi{infinite-dimensional vector space}
+A vector space is called infinite-dimensional if it is not finite-dimensional.
+
+\defi{linearly independent}
+$\cdot$ A list $v_{1}, \ldots, v_{m}$ of vectors in $V$ is called linearly independent if the only choice of $a_{1} \ldots ., a_{m} \in \mathbf{F}$ that makes $a_{1} v_{1}+\cdots+a_{m} v_{m}$
+equal 0 is $a_{1}=\cdots=a_{m}=0$ \\
+$\cdot$ The empty list ( ) is also declared to be linearly independent.
+
+\defi{linearly dependent}
+$\cdot$ A list of vectors in $V$ is called linearly dependent if it is not linearly independent. \\
+$\cdot$ In other words, a list $v_{1}, \ldots, v_{m}$ of vectors in $V$ is linearly dependent if there exist $a_{1}, \ldots, a_{m} \in \mathbf{F},$ not all $0,$ such that $a_{1} v_{1}+\cdots+a_{m} v_{m}=0$
+
+\thrm{Linear Dependence Lemma}
+Suppose $v_{1}, \ldots, v_{m}$ is a linearly dependent list in $V .$ Then there exists $j \in\{1,2, \ldots, m\}$ such that the following hold:
+(a) $\quad v_{j} \in \operatorname{span}\left(v_{1}, \ldots, v_{j-1}\right)$
+(b) if the $j^{\text {th }}$ term is removed from $v_{1}, \ldots, v_{m},$ the span of the remaining list equals $\operatorname{span}\left(v_{1}, \ldots, v_{m}\right)$
+
+\thrm{Length of linearly independent list $ \leq $ length of spanning list}
+In a finite-dimensional vector space, the length of every linearly independent list of vectors is less than or equal to the length of every spanning list of vectors.
+
+\thrm{Finite-dimensional subspaces}
+Every subspace of a finite-dimensional vector space is finite dimensional. 
