@@ -1,0 +1,60 @@
+\mysection{Section 3.D Invertibility and Isomorphic Vector Spaces}
+\defi{invertible, inverse}
+$\bullet$ A linear map $T \in \mathcal{L}(V, W)$ is called imertible if there exists a linear map $S \in \mathcal{L}(W, V)$ such that $S T$ equals the identity map on
+$V$ and $T S$ equals the identity map on $W$
+$\bullet$ A linear map $S \in \mathcal{L}(W, V)$ satisfying $S T=I$ and $T S=I$ is called an imverse of $T$ (note that the first $I$ is the identity map on $V$ and the second $I$ is the identity map on $W$ ).
+
+\thrm{Inverse is unique}
+An invertible linear map has a unique inverse.
+
+\defi{$\inv{T}$}
+If $T$ is invertible, then its inverse is denoted by $T^{-1} .$ In other words, if $T \in \mathcal{L}(V, W)$ is invertible, then $T^{-1}$ is the unique element of $\mathcal{L}(W, V)$ such that $T^{-1} T=I$ and $T T^{-1}=I$
+
+\thrm{Invertibility is equivalent to injectivity and surjectivity}
+A linear map is invertible if and only if it is injective and surjective.
+
+\defi{isomorphism, isomorphic}
+$\bullet$ An isomorphism is an invertible linear map.
+$\bullet$ Two vector spaces are called isomorphic if there is an isomorphism from one vector space onto the other one.
+
+\thrm{Dimension shows whether vector spaces are isomorphic}
+Two finite-dimensional vector spaces over $\mathbf{F}$ are isomorphic if and only if they have the same dimension.
+
+\thrm{$ \mathcal{L}(V, W) $ and $ \F^{m, n} $ are isomorphic}
+Suppose $v_{1}, \ldots, v_{n}$ is a basis of $V$ and $w_{1} \ldots w_{m}$ is a basis of $W$ Then $\mathcal{M}$ is an isomorphism between $\mathcal{L}(V, W)$ and $\mathbf{F}^{m, n}$
+
+\thrm{$ \dim \mathcal{L}(V, W) = (\dim V)(\dim W) $} 
+Suppose $V$ and $W$ are finite-dimensional. Then $\mathcal{L}(V, W)$ is finitedimensional implies the title.
+
+\defi{matrix of a vector, $ \mathcal{M}(v) $}
+Suppose $v \in V$ and $v_{1}, \ldots, v_{n}$ is a basis of $V .$ The matrix of $v$ with respect to this basis is the $n$ -by- 1 matrix
+$$
+\mathcal{M}(v)=\left(\begin{array}{c}
+{c_{1}} \\
+{\vdots} \\
+{c_{n}}
+\end{array}\right)
+$$
+where $c_{1}, \ldots, c_{n}$ are the scalars such that
+$$
+v=c_{1} v_{1}+\cdots+c_{n} v_{n}
+$$
+
+\thrm{$ \mathcal{M}(T)_{.,k} = \mathcal{M}(v_k) $} 
+Suppose $T \in \mathcal{L}(V, W)$ and $v_{1}, \ldots, v_{n}$ is a basis of $V$ and $w_{1}, \ldots, w_{m}$ is a basis of $W .$ Let $1 \leq k \leq n .$ Then the $k^{\text {th }}$ column of $\mathcal{M}(T),$ which is denoted by $\mathcal{M}(T),_{. k},$ equals $\mathcal{M}\left(v_{k}\right)$
+
+\thrm{Linear maps act like matrix multiplication}
+Suppose $T \in \mathcal{L}(V, W)$ and $v \in V .$ Suppose $v_{1}, \ldots, v_{n}$ is a basis of $V$ and $w_{1}, \ldots, w_{m}$ is a basis of $W .$ Then
+$$
+\mathcal{M}(T v)=\mathcal{M}(T) \mathcal{M}(v)
+$$
+
+\defi{operator, $ \mathcal{L}(V)$ }
+$\cdot$ A linear map from a vector space to itself is called an operator.
+$\cdot$ The notation $\mathcal{L}(V)$ denotes the set of all operators on $V $. In other words, $\mathcal{L}(V)=\mathcal{L}(V, V)$
+
+\thrm{Injectivity is equivalent to surjectivity in finite dimensions}
+Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V) .$ Then the following are equivalent:
+(a) $\quad T$ is invertible;
+(b) $\quad T$ is injective;
+(c) $\quad T$ is surjective.
