@@ -1,1 +1,59 @@
-\mysection{}
+\mysection{Section 3.A The Vector Space of Linear Maps}
+
+\defi{linear map}
+A linear map from $V$ to $W$ is a function $T: V \rightarrow W$ with the following properties:
+additivity
+$$
+T(u+v)=T u+T v \text { for all } u, v \in V
+$$
+homogeneity
+$$
+T(\lambda v)=\lambda(T v) \text { for all } \lambda \in \mathbf{F} \text { and all } v \in V
+$$
+
+\defi{Notation $ \mathcal{L}(V, W) $}
+The set of all linear maps from $V$ to $W$ is denoted $\mathcal{L}(V, W)$
+
+\thrm{Linear maps and basis of domain}
+Suppose $v_{1}, \ldots, v_{n}$ is a basis of $V$ and $w_{1}, \ldots, w_{n} \in W .$ Then there exists a unique linear map $T: V \rightarrow W$ such that
+$$
+T v_{j}=w_{j}
+$$
+for each $j=1, \ldots, n$
+
+\defi{additiona nd scalar multiplication on linear maps}
+Suppose $S, T \in \mathcal{L}(V, W)$ and $\lambda \in \mathbf{F} .$ The sum $S+T$ and the product $\lambda T$ are the linear maps from $V$ to $W$ defined by
+$$
+(S+T)(v)=S v+T v \quad \text { and } \quad(\lambda T)(v)=\lambda(T v)
+$$
+for all $v \in V$
+
+\thrm{$\mathcal{L}(V, W) $ is a vector space}
+With the operations of addition and scalar multiplication as defined above, $\mathcal{L}(V, W)$ is a vector space.
+
+\defi{Product of Linear Maps}
+If $T \in \mathcal{L}(U, V)$ and $S \in \mathcal{L}(V, W),$ then the product $S T \in \mathcal{L}(U, W)$ is defined by
+$$
+(S T)(u)=S(T u)
+$$
+for $u \in U$
+
+\thrm{Algebraic Properties of products of linear maps}
+\textbf{associativity}
+$$
+\left(T_{1} T_{2}\right) T_{3}=T_{1}\left(T_{2} T_{3}\right)
+$$
+whenever $T_{1}, T_{2},$ and $T_{3}$ are linear maps such that the products make sense (meaning that $T_{3}$ maps into the domain of $T_{2},$ and $T_{2}$ maps into the domain of $T_{1}$ ).
+\textbf{identity}
+$$
+T I=I T=T
+$$
+whenever $T \in \mathcal{L}(V, W)$ (the first $I$ is the identity map on $V,$ and the second $I$ is the identity map on $W$ ).
+\textbf{distributive properties}
+$$
+\left(S_{1}+S_{2}\right) T=S_{1} T+S_{2} T \quad \text { and } \quad S\left(T_{1}+T_{2}\right)=S T_{1}+S T_{2}
+$$
+whenever $T, T_{1}, T_{2} \in \mathcal{L}(U, V)$ and $S, S_{1}, S_{2} \in \mathcal{L}(V, W)$
+
+\thrm{Linear maps take 0 to 0}
+Suppose $T$ is a linear map from $V$ to $W .$ Then $T(0)=0$
