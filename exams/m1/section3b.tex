@@ -1,1 +1,43 @@
-\mysection{Section 3.B}
+\mysection{Section 3.B Null Spaces and Ranges}
+
+\defi{null space}
+For $T \in \mathcal{L}(V, W),$ the null space of $T,$ denoted null $T,$ is the subset of $V$ consisting of those vectors that $T$ maps to 0 :
+$$
+\text { null } T=\{v \in V: T v=0\}
+$$
+
+\defi{injective}
+A function $T: V \rightarrow W$ is called injective if $T u=T v$ implies $u=v$
+
+\thrm{Injectivity is equivalent to null space equals $ \{0\} $}
+Let $T \in \mathcal{L}(V, W) .$ Then $T$ is injective if and only if null $T=\{0\}$
+
+\defi{range}
+For $T$ a function from $V$ to $W,$ the range of $T$ is the subset of $W$ consisting of those vectors that are of the form $T v$ for some $v \in V:$
+$$
+\text { range } T=\{T v: v \in V\}
+$$
+
+\thrm{The range is subspace}
+If $T \in \mathcal{L}(V, W),$ then range $T$ is a subspace of $W$
+
+\defi{surjective}
+A function $T: V \rightarrow W$ is called surfective if its range equals $W$
+
+\thrm{Fundamental Theorem of Linear Maps}
+Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V, W) .$ Then range $T$ is finite-dimensional and
+$$
+\operatorname{dim} V=\operatorname{dim} \operatorname{null} T+\operatorname{dim} \operatorname{range} T
+$$
+
+\thrm{A map to a smaller dimensional space is not injective}
+Suppose $V$ and $W$ are finite-dimensional vector spaces such that $\operatorname{dim} V>\operatorname{dim} W .$ Then no linear map from $V$ to $W$ is injective.
+
+\thrm{A map to a larger dimensional space is not surjective}
+Suppose $V$ and $W$ are finite-dimensional vector spaces such that $\operatorname{dim} V<\operatorname{dim} W .$ Then no linear map from $V$ to $W$ is surjective.
+
+\thrm{Homogeneous system of linear equations}
+A homogeneous system of linear equations with more variables than equations has nonzero solutions.
+
+\thrm{Inhomogeneous system of linear equations}
+An inhomogeneous system of linear equations with more equations thavariables has no solution for some choice of the constant terms.

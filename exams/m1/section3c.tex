@@ -1,0 +1,58 @@
+\mysection{Section 3.C Matrices}
+
+\defi{matrix, $ A_{j, k}$}
+Let $m$ and $n$ denote positive integers. An $m$ -by-n matrix $A$ is a rectangular array of elements of $\mathbf{F}$ with $m$ rows and $n$ columns:
+$$
+A=\left(\begin{array}{ccc}
+{A_{1,1}} & {\dots} & {A_{1, n}} \\
+{\vdots} & {} & {\vdots} \\
+{A_{m, 1}} & {\dots} & {A_{m, n}}
+\end{array}\right)
+$$
+The notation $A_{j, k}$ denotes the entry in row $j,$ column $k$ of $A .$ In other words, the first index refers to the row number and the second index refers to the column number.
+
+\defi{matrix of a linear map, $ \mathcal{M} (T)$}
+Suppose $T \in \mathcal{L}(V, W)$ and $v_{1}, \ldots, v_{n}$ is a basis of $V$ and $w_{1}, \ldots, w_{m}$ is a basis of $W .$ The matrix of $T$ with respect to these bases is the $m-b y-n$ matrix $\mathcal{M}(T)$ whose entries $A_{j, k}$ are defined by
+$$
+T v_{k}=A_{1, k} w_{1}+\cdots+A_{m, k} w_{m}
+$$
+If the bases are not clear from the context, then the notation $\mathcal{M}\left(T,\left(v_{1}, \ldots, v_{n}\right),\left(w_{1}, \ldots, w_{m}\right)\right)$ is used.
+
+\defi{$\F^{m, n}$}
+For $m$ and $n$ positive integers, the set of all $m-b y-n$ matrices with entries in $\mathbf{F}$ is denoted by $\mathbf{F}^{m, n}$
+
+\thrm{$\dim \F^{m, n} = mn$} 
+Suppose $m$ and $n$ are positive integers. With addition and scalar multiplication defined as above, $\mathbf{F}^{m, n}$ is a vector space with dimension $m n$
+
+\defi{matrix multiplication}
+Suppose $A$ is an $m-$ by $-n$ matrix and $C$ is an $n$ -by $-p$ matrix. Then $A C$ is defined to be the $m$ -by-p matrix whose entry in row $j,$ column $k,$ is given by the following equation:
+$$
+(A C)_{j, k}=\sum_{r=1}^{n} A_{j, r} C_{r, k}
+$$
+In other words, the entry in row $j,$ column $k,$ of $A C$ is computed by taking row $j$ of $A$ and column $k$ of $C,$ multiplying together corresponding entries, and then summing.
+
+\defi{$ A_{j, .}, A_{.,k}$} 
+Suppose $A$ is an $m$ -by $-n$ matrix.
+$\cdot$ If $1 \leq j \leq m,$ then $A_{j,.} \text { denotes the } 1-\text { by }-n \text { matrix consisting of }$ row $j$ of $A$
+$\cdot$ If $1 \leq k \leq n,$ then $A., k$ denotes the $m-$ by $-1$ matrix consisting of column $k$ of $A$
+
+\thrm{Entry of matrix product equals row times column}
+Suppose $A$ is an $m$-by-$n$ matrix and $C$ is an $n$ -by- $p$ matrix. Then
+$$
+(A C)_{j, k}=A_{j,.} C_{., k}
+$$
+for $1 \leq j \leq m$ and $1 \leq k \leq p$
+
+\thrm{Column of matrix product equals matrix times column}
+Suppose $A$ is an $m-$ by-n matrix and $C$ is an $n$ -by-p matrix. Then
+$$
+(A C)_{., k} = A C_{., k}
+$$
+for $1 \leq k \leq p$
+
+\thrm{Linear combination of columns}
+Suppose $A$ is an $m-b y-n$ matrix and $c=\left(\begin{array}{c}{c_{1}} \\ {\vdots} \\ {c_{n}}\end{array}\right)$ is an $n$ -by-1 matrix. Then
+$$
+A c=c_{1} A_{.1}+\cdots+c_{n} A_{. n}
+$$
+In other words, $A c$ is a linear combination of the columns of $A,$ with the scalars that multiply the columns coming from $c .$
