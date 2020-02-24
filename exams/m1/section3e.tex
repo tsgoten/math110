@@ -1,0 +1,51 @@
+\mysection{Section 3.E Products and Quotients of Vector Spaces}
+
+\defi{product of vector space}
+Suppose $V_{1}, \ldots, V_{m}$ are vector spaces over $\mathbf{F}$
+$\bullet$ The product $V_{1} \times \cdots \times V_{m}$ is defined by
+$$
+V_{1} \times \cdots \times V_{m}=\left\{\left(v_{1}, \ldots, v_{m}\right): v_{1} \in V_{1}, \ldots, v_{m} \in V_{m}\right\}
+$$
+$\bullet$ Addition on $V_{1} \times \cdots \times V_{m}$ is defined by
+$$
+\left(u_{1}, \ldots, u_{m}\right)+\left(v_{1}, \ldots, v_{m}\right)=\left(u_{1}+v_{1}, \ldots, u_{m}+v_{m}\right)
+$$
+$\bullet$ Scalar multiplication on $V_{1} \times \cdots \times V_{m}$ is defined by
+$$
+\lambda\left(v_{1}, \ldots, v_{m}\right)=\left(\lambda v_{1}, \ldots, \lambda v_{m}\right)
+$$
+
+\thrm{Product of vector spaces is a vector space}
+Suppose $V_{1}, \ldots, V_{m}$ are vector spaces over $\mathbf{F} .$ Then $V_{1} \times \cdots \times V_{m}$ is a vector space over $\mathbf{F}$
+
+\thrm{Dimension of a product is the sum of dimensions}
+Suppose $V_{1}, \ldots, V_{m}$ are finite-dimensional vector spaces. $\quad$ Then $V_{1} \times \cdots \times V_{m}$ is finite-dimensional and
+$$
+\operatorname{dim}\left(V_{1} \times \cdots \times V_{m}\right)=\operatorname{dim} V_{1}+\cdots+\operatorname{dim} V_{m}
+$$
+
+\thrm{Products and direct sums}
+Suppose that $U_{1}, \ldots, U_{m}$ are subspaces of $V .$ Define a linear map
+$$
+\begin{aligned}
+\Gamma: U_{1} \times \cdots \times U_{m} & \rightarrow U_{1}+\cdots+U_{m} \mathrm{by} \\
+\Gamma\left(u_{1}, \ldots, u_{m}\right) &=u_{1}+\cdots+u_{m}
+\end{aligned}
+$$
+Then $U_{1}+\cdots+U_{m}$ is a direct sum if and only if $\Gamma$ is injective.
+
+\thrm{A sume is a direct sum if and only if dimensions add up}
+Suppose $V$ is finite-dimensional and $U_{1}, \ldots, U_{m}$ are subspaces of $V .$ Then $U_{1}+\cdots+U_{m}$ is a direct sum if and only if
+$$
+\operatorname{dim}\left(U_{1}+\cdots+U_{m}\right)=\operatorname{dim} U_{1}+\cdots+\operatorname{dim} U_{m}
+$$
+
+\defi{$ v + U $}
+Suppose $v \in V$ and $U$ is a subspace of $V .$ Then $v+U$ is the subset of $V$ defined by
+$$
+v+U=\{v+u: u \in U\}
+$$
+
+\defi{affine subset, parrallel}
+$\bullet$ An affine subset of $V$ is a subset of $V$ of the form $v+U$ for some $v \in V$ and some subspace $U$ of $V$
+$\bullet$ For $v \in V$ and $U$ a subspace of $V,$ the affine subset $v+U$ is said to be parallel to $U$
