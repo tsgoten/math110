@@ -1,0 +1,65 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amssymb, amsthm, commath, chngcntr, enumitem, multirow, thmtools, xcolor}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\question}[1]{\textcolor{blue}{#1} \\}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\LinearMap}[2]{\mathcal{L}(#1, #2)}
+\newcommand{\poly}[2]{\mathcal{P}_{#1}\left(#2\right)}
+\newcommand{\vspan}[1]{\text{span}\left(#1\right)}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1} \\}
+\newcommand{\nul}{\text{null }}
+\newcommand{\nullity}{\text{nullity }}
+\newcommand{\range}{\text{range }}
+\newcommand{\rank}{\text{rank }}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\declaretheoremstyle[
+spaceabove=\topsep, spacebelow=\topsep,
+headfont=\normalfont\bfseries,
+notefont=\bfseries, notebraces={Problem }{},
+bodyfont=\normalfont,
+postheadspace=0.5em,
+name={\ignorespaces},
+numbered=no,
+headpunct=:]
+{mystyle}
+\declaretheorem[style=mystyle]{q}
+
+\begin{document}
+	
+\makechaptertitle{Math 110 Homework 5}
+
+\section{Exercises 3.E}
+\begin{q}[3]
+    
+\end{q}
+\begin{q}[10]
+    From last discussion we know that for any affine subset $ A $ and vectors $ u, v \in A $. 
+    It is true that $ \lambda u + (1 - \lambda) v \in A $. 
+    Then, it follows directly that for affines subsets $ A_1 $ and $ A_2 $ if the intersection is not empty, 
+    $ u, v \in A_1 \cap A_2 $, then $ \lambda u + (1 - \lambda) v \in A_1 $. 
+    And, similarily $ \lambda u + (1 - \lambda) v \in A_2 $.  
+    Therefore, $ A_1 $ and $ A_2 $ are affine subsets and we can define their intersection with the following values to also be a affine subset with the following form. 
+    If the intersection is empty, then clearly we get that the following form would be empty as well, therefore the intersection of the affine subsets would be empty.
+\end{q}
+\begin{q}[11]
+
+    
+\end{q}
+
+\end{document}
