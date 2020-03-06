@@ -118,7 +118,21 @@ headpunct=:]
     $ \annhilator{U + W} = \annhilator{U} \cap \annhilator{W} $
 \end{q}
 \begin{q}[23]
-    
+    Since, $ V $ is finite dimensional and $ U $ and $ W $ are subspaces we know 
+    $$ \dim V = \dim U + \dim W - \dim U \cap W $$
+    by adding extra $ \dim V $ on each sides and moving things around we get
+    $$ \dim V - \dim U + \dim V - \dim W = \dim V - \dim U \cap W $$
+    We also know that $ \dim \annhilator{U} + \dim U = V $ and $ \dim \annhilator{W} + \dim W = V $ and 
+    $ \dim (U \cap W) + \dim \annhilator{(U \cap W)} = \dim V $. 
+    Then making the right substitutions we get, 
+    $$ \dim \annhilator{U} + \dim \annhilator{W} = \dim \annhilator{(U \cap W)} $$
+    To make it all work, we just have to show that one of the sides is a subspace of the other. 
+    Suppose we have a $ \varphi \in (U \cap W)^0 $, then for some $ \psi in U^0 + W^0 $ we know that $ \psi = \varphi_U + \varphi_W $ for $ \varphi_U \in \annhilator{U}  $ and $ \varphi_W \in \annhilator{W} $. 
+    Then, clealry $ \psi(v) $ for some $ v\in U \cap W $ it holds that $ \psi(v) = (\varphi_U + \varphi_W)(v) = \varphi_U(v) + \varphi_W(v) $ and since $ v $ is in $ U $ and $ W $ it must be that $ \varphi_U(v) = 0 $ and $ \varphi_W(v) = 0 $ so $ \psi(v) = 0 $. 
+    So, we showed that 
+    $$ (U \cap W)^0  \subset U^0 + W^0 $$
+    Therefore, 
+    $$ (U \cap W)^0  = U^0 + W^0 $$
 \end{q}
 
 \end{document}
