@@ -1,0 +1,90 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amssymb, amsthm, commath, chngcntr, enumitem, multirow, thmtools, xcolor}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\question}[1]{\textcolor{blue}{#1} \\}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\LinearMap}[2]{\mathcal{L}(#1, #2)}
+\newcommand{\poly}[2]{\mathcal{P}_{#1}\left(#2\right)}
+\newcommand{\vspan}[1]{\text{span}\left(#1\right)}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1} \\}
+\newcommand{\nul}{\text{null }}
+\newcommand{\nullity}{\text{nullity }}
+\newcommand{\range}{\text{range }}
+\newcommand{\rank}{\text{rank }}
+\newcommand{\annhilator}[1]{#1^{0}}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\declaretheoremstyle[
+spaceabove=\topsep, spacebelow=\topsep,
+headfont=\normalfont\bfseries,
+notefont=\bfseries, notebraces={Problem }{},
+bodyfont=\normalfont,
+postheadspace=0.5em,
+name={\ignorespaces},
+numbered=no,
+headpunct=:]
+{mystyle}
+\declaretheorem[style=mystyle]{q}
+
+\begin{document}
+	
+\makechaptertitle{Math 110 Homework 6}
+
+\begin{q}[7]
+    Since, $ p $ is in the standard basis of $ \poly{m}{\R} $ it has only one term to consider.
+    Namely, a term $ x^j $ where $ j \in \{1, ..., m\} $. 
+    Then, if $ p $ has a degree strictly greater than $ j $ it will have some $ x $ term for $ p^(j) $. 
+    Thus, evaluated at 0, it will equal 0. 
+    If $ p $ has a degree strictly less than $ j $ then $ p^{(j)} = 0 $ by the power rule form calculus.
+    So, when $ p $ has degree exactly $ j $ we have that it will evaluate to some constant by the power rule. 
+    This constant will be exactly $ j! $, again by the power rule. 
+    So, we normalize it by dividing it by $ j! $, so $ \varphi(j) = 1$. 
+    Then, we have a valid $ \varphi_j $ such that it only evaluates to 1 for one of the polynomials in the standard basis and 0 for all other. 
+    Thus, a valid dual basis. 
+\end{q}
+\begin{q}[9]
+    Since, $ \psi \in V' $ it is equivalent to the following linear combination with scalars $ a_1, .., a_n $. 
+    That is, 
+    $$ \psi = a_1 \varphi_1 + ... + a_n \varphi_n $$
+    Then for some $ v_j $ in the basis of $ V $ w ehave that 
+    $$ \psi(v_j) = a_j \varphi_j(v_j) = a_j $$
+    Since, all the other ones are 0, since it is evaluated at a basis vector
+    Then, we simply make direct substitutions for each $ j \in \{1, ..., n\} $ and get the desired result.
+\end{q}
+\begin{q}[11]
+    This is pretty simple. 
+    For the $ \impliedby $ direction. 
+    All $ d_j $ are some arbitrary costants in $ \F $. 
+    So, we construct $ A_{j, k} $ such that each column is just a scalar multiple of each other. 
+    Since, we are multiplying the same $ (c_1, ..., c_m $ by arbitrary constants $ d_j $. 
+    Then, clearly if all the vectors are scalar multiples of each other we must remove all of them except 1 to get a linearly independent list. 
+    Therefore, the dimension of the row space is 1 and thus rank is 1. 
+    For the $ \implies $ direction we argue that since $ A $ has rank 1, then the column space has dimesnion 1. 
+    So, it follows that the columns are constructed as follows for some vectors $ d_1, ..., d_n $. That is they are scalar multiples of each other.
+\end{q}
+\begin{q}[19]
+    $ \implies $. If $ U = V $, then the $ \varphi $ such that $ \varphi(u) = 0 = \varphi(v) $ for all $ u \in U$ and all $ v \in V $ is just 0, since 0 is unique in a vector space. \\
+    $ \impliedby $. We know $ V $ is finite-dimensional, so 
+    $$ \dim U + \dim \annhilator{U}  = \dim V $$
+    But, the annhilator has dimension 0 so 
+    $ \dim U = \dim V $
+    since,  $ U $ is a subspace of $ V $ it implies that 
+    $$ U = V $$ 
+\end{q}
+
+\end{document}
