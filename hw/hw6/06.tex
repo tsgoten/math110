@@ -45,6 +45,7 @@ headpunct=:]
 	
 \makechaptertitle{Math 110 Homework 6}
 
+\section{Exercises 3.F}
 \begin{q}[7]
     Since, $ p $ is in the standard basis of $ \poly{m}{\R} $ it has only one term to consider.
     Namely, a term $ x^j $ where $ j \in \{1, ..., m\} $. 
@@ -134,5 +135,56 @@ headpunct=:]
     Therefore, 
     $$ (U \cap W)^0  = U^0 + W^0 $$
 \end{q}
+\begin{q}[34]
+    
+\end{q}
+\begin{q}[35]
+    We define a linear map $ T : \poly{}{\R}' \to \R^\infty $ as follows. 
+    By our understanding of the standard dual basis of $ \poly{}{\R}' $ for some $ \varphi \in \poly{}{\R}' $ is of the form $ \varphi = a_1 \varphi_1 + a_2 \varphi_2 + ... $. 
+    So we define $ T(\varphi) = (a_1, a_2, ....) $. We know the following coefficients uniquely, so the mapping is to a unique value in $ \R^\infty $, that is $ T $ is injective. 
+    Now we define the inverse $ \inv{T} $ as follows. 
+    For some $ (a_1, a_2, ...) \in \R^\infty $ we map $ \inv{T} (a_1, a_2, ...) = \varphi = a_1 \varphi_1 + a_2 \varphi_2 + ... $. 
+    Then, since each $ \varphi $ is uniquely defined by these polynomials we have shown that $ \inv{T} $ is injective. 
+    Since, bot $ T $ and $ \inv{T} $ are injective this completes the proof that $ T $ is invertible, so the two vector spaces are isomorphic.
+\end{q}
+
+\section{Exercises 4}
+\begin{q}[2]
+    No. Consider the following counterexample for a subspace where $ m = 2 $.
+    $ x^2 + x $ and $ -x^2 $ are in the subspace. 
+    But the vector addition of $ x^2 + x - x^2 = x $ is not in the subspace since it has degree 1.
+\end{q}
+\begin{q}[3]
+    No. Consider the following counterexample for a subspace where $ m = 2 $.
+    $ x^2 + x $ and $ -x^2 $ are in the subspace, since they both have degree 2 which is even. 
+    But the vector addition of $ x^2 + x - x^2 = x $ is not in the subspace since it has degree 1, which is odd.
+\end{q}
+\begin{q}[6]
+    For the $ \impliedby $ direction if $ p $ and $ p' $ don't have distinct zeros then it means that there exists no $ z \in \C $ such that $ p(z) = 0 = p'(z) $.
+    In other words, a point $ z $ such that it is zero and the slope at that point is zero. 
+    Then it must be that there is no point $ a \in \C $ such that $ p(z) = (a-z)^m $ for  $ m > 1 $ since by the chain rule $ p'(z) $ will have some form of the term $ m(a-z)^{m-1} $. 
+    This, can only happen if $ m > 2 $ and that means that it has repeated zeros. We use the exact same argument to go the other way thus showing the if and only if condiiton. 
+\end{q}
+\begin{q}[7]
+    By 4.15 if a polynomial has a real coefficients and a $ z \in \C $ as a root, the roots come in pairs.
+    Since, pairs are well pairs, and the polynomial has odd degree, so odd zeros there is a forever lonely zero left out. 
+    This, forever lonely zero must be a real number since if it were complex it would come in a pair. 
+\end{q}
+\begin{q}[8]
+    $ Tp $ is well defined in $ \poly{}{\R} $ since for every polynomial the term $\frac{p-p(3)}{x-3}$ evaluates to a polynomial by our definition of polynomial division. 
+    And, when $ x = $ it evaluates to $ p'(3) $ which again is well defined for all polynomials.
+    $ T $ is a linear map by closure under addition and scalar multiplication. 
+    Observe for $ T(p + q) $ we have 
+    $$T (p + q)=\left\{\begin{array}{ll}\frac{p + q -p(3) - q(3)}{x-3} & \text { if } x \neq 3 \\ p^{\prime}(3) + q'(3) & \text { if } x=3\end{array}\right.$$
+    Which is exactly equivalent to $ Tp + Tq $. 
+    Then for sclar multiplication, 
+    $$T \lambda p=\left\{\begin{array}{ll} \lambda \frac{p-p(3)}{x-3} & \text { if } x \neq 3 \\ \lambda p^{\prime}(3) & \text { if } x=3\end{array}\right.$$
+    By distributivity for the the top term, and by the power rule for the bottom term. Which are both equivalent to $ \lambda Tp $.
+\end{q}
+\begin{q}[10]
+    Assume for contradiction that one of the coefficients is complex. Then there is some term in $ p $ as $ az^n $ for some $ a \in \C $ and $ n \leq m $. Then, a real number multiplied by a complex number is complex. 
+    This is a contradiction and therefore the polynomial must have all real coefficients.  
+\end{q}
+
 
 \end{document}
