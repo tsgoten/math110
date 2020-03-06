@@ -46,7 +46,11 @@ headpunct=:]
 
 \section{Exercises 3.E}
 \begin{q}[3]
-    
+    Let $ U_1 $ be the infinite tuple spanned by $ (1, 0, 1, 0, 1 , ....) \text{ and } (0, 1, 0, 1, ...)  $ that is every other value is zero and everyth else is the same. 
+    Let $ U_2 $ be the infinite tuple spanned by $ (1, 1, 1, 1, ...) $, that is all the values are the same. 
+    We claim they are isomorphic by showing well defined inverses. 
+    We can get from $ U_1 \times U_2 $ by showing that we take the first element and add it to the second, this is clearly what $ U_1 + U_2 $. 
+    We show the other way is also well defined since,  whatever constant value we subtract we can keep at our second index, and our first index can be the result of making the subtraction. 
 \end{q}
 \begin{q}[10]
     From last discussion we know that for any affine subset $ A $ and vectors $ u, v \in A $. 
@@ -58,8 +62,57 @@ headpunct=:]
     If the intersection is empty, then clearly we get that the following form would be empty as well, therefore the intersection of the affine subsets would be empty.
 \end{q}
 \begin{q}[11]
-
-    
+    A is an Affine set since it is in the expected form of an affine set as shown in discussion of the form $ \lambda x + (1-\lambda)  y $. 
+    Since, the affine subset is basically writte out for some $ v $ in terms of other basis $ v_1, ..., v_m $ it follows that any affine subset that contians that also clearly contians $ A $. 
+    $ v $ adds the final dimension to the affien subset of $ A $ so it realizes that the dimension of $ U $ is $ m - 1$. 
 \end{q}
+\begin{q}[12]
+    Suppose, we take an arbitary subspace of $ V $,  $ V_m $ such that $ V_m \supset U $ and $ \dim V_m = m$. 
+    Then dimension of the quotient space is as follows
+    $ \dim V_m / U = \dim V_m - \dim U $
+    and the dimension of the cross product is the sum so we have 
+    $$ \dim (U \times V_m / U) = \dim U + (\dim V_m - \dim U) = \dim _m = m $$
+    Then if follows that $(U \times V_m / U)$ has the same dimension as $ V_m $, so they are isomorphic.
+    Then, we can show this for any arbitary $ m $, even as $ m \to \infty $.
+\end{q}
+\begin{q}[13]
+    Observe that for the basis of the quotient space it must be that $ v \not\in U $ for $ v \neq 0 $, since if it were then $ v + U  = U $. 
+    Then, it must be that all $ v_i $ and $ u_j $ are not scalar mutiples of each other. 
+    By that fact and that the dimensions of the quotient space is $ n $ and that $ U $ is $ m $ we have a lienalry independent list of the right length so it must form a basis.
+\end{q}
+\begin{q}[14]
+    (a) Well the sum of a list of finitely many nonzero values with anothe one will lead to a notehr list with finitely many nonzero values so that ensures it is closed under additon.
+    For scalar multiplication all the zero values will remain zero, and only the nonzero values will be scaled. Eitherways there are still a finite number of nonzero values so it is closed under multiplication. \\
+    (b) $ U $ has finite dimension since it can uniquely be spanned by the standard basis at the points of the nonzero values, so since $ U $ is finite dimensional we can apply the same methon as in problem 12 to show that $ V / U $ must also be infinite dimensional.
+\end{q}
+\begin{q}[16]
+    If $ \dim V / U = 1 $ The it must be that $ \dim U < \dim V $. 
+    So, then the dimension of the $ \null \varphi $ is just the anhilator which we know is nonempty since $ \dim U < \dim V $ so it is at least 1. 
+    Thefore, we can select such a $ \varphi $. 
+\end{q}
+
+\section{Exercises 3.F}
+\begin{q}[3]
+    For $ v \in V $ since $ v $ is lineary independent list it can be extended to a basis. For the dual basis then clearly there is a $ \varphi $ in the dual basis such that $ \varphi(v) = 0 $.
+\end{q}
+\begin{q}[4]
+    We have that $ U \subset V $ strictly so, $ \dim U < \dim V $. 
+    Therefore, by the dimension of the annhilator 
+    $ \dim U^{\circ} > 0 $. 
+    In otherwords, it is not empty so there is a $ phi $, namely the one in the annhilator such that the condition holds.
+\end{q}
+\begin{q}[6]
+    (a) Suppose that some functional $ \varphi \in \null \Gamma $. 
+    Then, clearly $ \varphi (v_1) = ... = \varphi (v_m) = 0 $, so for all $ v \in V $ since the $ v_1 , ..., v_m $ spans $ V $, $ v $ can be expressed as a linear combination of those vectors. 
+    That is $ \varphi v = a_1 \varphi(v_1)+ ... + a_m \varphi(v_m) = 0 $, but since all the terms are zero we have a $ \varphi $ that only maps to zero so it must be that $ \varphi = 0$. 
+    Therefore, since our $ \varphi $ was arbitary it must be that $ \null \Gamma = \{0\} $ , therefore it is injective.
+    For the other way, assume for contradiction that $ v_1, ..., v_m $ does not span  $ V $. 
+    Then, we can define subspace $ \vspan{v_1, ..., v_m} \subset V $ and by what we argued in problem 4 we have choose a $ \varphi $ such that it is nonzero but still map every value in the span to 0, but this is a contradition since we said that $ \Gamma $ is injective and therefore the $ \nul \Gamma $ must be the empty set. \\
+    (b) We have that $ v_1, ..., v_m $ is linearly independent so then there are unique $ a_1, ..., a_m $ such that the linear combination is only zero when all the scalars are zero.
+    Therefore, we have that Gamma is surjective since we have that the dimension of the range of $ \Gamma $ is equal to $ m $, 
+    so since the rank is equal to the dimension of the image it must be that it is surjective.
+\end{q}
+    
+
 
 \end{document}
