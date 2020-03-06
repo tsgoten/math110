@@ -84,7 +84,26 @@ headpunct=:]
     But, the annhilator has dimension 0 so 
     $ \dim U = \dim V $
     since,  $ U $ is a subspace of $ V $ it implies that 
-    $$ U = V $$ 
+    $ U = V $
+\end{q}
+\begin{q}[20]
+    Pick an arbitrary $ \varphi \in \annhilator{W} $. 
+    Since, $ U \subset W $ for all $ u \in U $, $ \varphi(u) = 0 $, so clearly $ \varphi \in \annhilator{U} $. 
+    We showed this for an arbitrary $ \varphi $ so $ \annhilator{W} \subset \annhilator{U} $.
+\end{q}
+\begin{q}[21]
+    Since $ V $ is finite dimensional we abuse the dimension of the annhilator formula.  
+    \begin{align*}
+        \dim U + \dim \annhilator{U}  &= \dim V \\
+        \dim W + \dim \annhilator{W}  &= \dim V \\
+        \dim W + \dim \annhilator{W}  &= \dim U + \dim \annhilator{U} \\
+        \intertext{Since, $ \annhilator{W} \subset \annhilator{U} $ we have that}
+        \dim \annhilator{W} &\leq \dim \annhilator{U} \\
+        \intertext{Then, to hold the equality it must be the case that}
+        \dim W &\geq \dim U
+        \intertext{Therefore,}
+        W &\supset U
+    \end{align*}
 \end{q}
 
 \end{document}
