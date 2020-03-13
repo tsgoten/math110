@@ -10,6 +10,7 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\LinearMap}[2]{\mathcal{L}(#1, #2)}
+\newcommand{\Operator}[1]{\mathcal{L}(#1)}
 \newcommand{\poly}[2]{\mathcal{P}_{#1}\left(#2\right)}
 \newcommand{\vspan}[1]{\text{span}\left(#1\right)}
 \newcommand{\inv}[1]{#1^{-1}}
@@ -65,6 +66,31 @@ headpunct=:]
 	Let $ u \in \range S $, then there exists some $ v \in V $ such that $ Sv = u $. 
 	Since,$ TSv \in \range S $, we have $ Tu \in \range S $.  
 \end{q}
+\begin{q}[6]
+	True! \\
+	We have a subspace $ U $ of $ V $ such that it is invariant for all $ T \in \LinearMap{V}{V} $, 
+	assume for contradiction that $ U \neq 0 $ and $ U \neq V $. 
+	Then, since $ V $ is finite dimensional we have some basis of $ U $ 
+	$$ u_1, ..., u_m \text{ is a basis of } U $$
+	Then we can extend the basis of $ U $ to a basis of $ V $, and since we know that $ U \neq V $ it must be that we must extend it by at least one vector.
+	$$ u_1, ..., u_m, v_1, ..., v_n \text{ is a basis of } V $$
+	Then, let $ T \in \Operator{V} $ such that for all $ i \in 1, ..., n $ we have that 
+	$$ Tu_i = v_i $$
+	and the remaining basis vectors of $ U $, if there are any, are mapped to 0.
+	Let $ u $ be an arbitrary vector $ u \in U $, then 
+	\begin{align*}
+		u &= a_1 u_1 + ... + a_m u_m 
+		\intertext{for some scalars $ a_1, ..., a_m $. Then, }	
+		Tu &= a_1Tu_1 + ... + a_m Tu_m \\
+		Tu &= a_1v_1 + ... + a_m v_m 
+		\intertext{Since we have that $ U $ is invariant under all linear maps it must be that $ Tu \in U $ so there exists some linear combination of $ u_1, ..., u_m $ that is equal to $ Tu $. So for some scalars $ b_1, .., b_m $}
+		Tu &= b_1u_1 + ... + b_mu_m 
+		\intertext{Substituting the two reprsentations of $ Tu $ we get}
+		b_1u_1 + ... + b_mu_m &= a_1v_1 + ... + a_m v_m
+		\intertext{Then, we have a contradiction since we claimed that $ u_1, ..., u_m, v_1, ..., v_n $ is a basis and therefore a linearly independent list of vectors. But since they can be expressed as a linear combination of each other as such they are not linearly independent, by some previous exercises. Thus, it must be that $ U = \{0\} $ or $ U = V $.}
+	\end{align*}
+\end{q}
+
 
 
 
