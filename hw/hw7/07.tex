@@ -46,9 +46,15 @@ headpunct=:]
 
 \section{Exercises 5.A}
 \begin{q}[1]
-	The arguments follow.
+	The argument is as follows.
 	\begin{enumerate}[(a)]
 		\item Let $ u $ be an arbitrary vector $ u \in U $.
+		If $ U \subset \nul T $, then $ u \in \nul T $. 
+		So, $ Tu = 0 $. Since, $ U $ is a vector space, it must be that $ 0 \in U $, so $ Tu \in U $.
+		Thus, $ U $ is invariant under $ T $ given the condition.
+		\item By definition we have $ Tu \in \range T $ for all $ u \in U $. 
+		Since, $ \range T \subset U $ we have that for all $ u $, $ Tu \in U $. 
+		Thus, $ U $ is invariant under $ T $ given the condition.
 	\end{enumerate}
 \end{q}
 
