@@ -157,7 +157,13 @@ headpunct=:]
 	Since, the rows sum to 1, we have that $ Ax = (1, 1, ..., 1) $. So, we have the case that 
 	$$ T(1, ..., 1) = A(1, ..., 1) = \lambda (1, ..., 1) $$
 	Then $ \lambda = 1 $, and will always be an eigenvalue that exists for all $ n $. \\
-	(b) 
+	(b) Following from Kubrat's answer on Piazza @230. 
+	Suppose $ 1 $ is an eigenvalue, then $ T - \lambda I $ is a matrix where all the columns add up 0. 
+	Since, before they sum to 1 and now we subtracted 1 from some element in each column. 
+	Now observe that if we take some vector $ v_j $ in the standard basis of $ \F^n $ and find some basis for $ Tv = w $.
+	We have that it is equal to the sum of the $j^{th}$ column of $ A $, but since it is equal to zero we have found a linear combination that would mean that $ a_1 w_1 + ... + a_n w_n = 0 $ for some nonzero coefficients.
+	So it is the case that $ \dim \range (A - \lambda I) < n $. 
+	Therefore, $ A - \lambda I $ is not surjective and by 5.6 $ \lambda = 1 $ is an eigenvalue.
 \end{q}
 
 
