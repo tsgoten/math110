@@ -141,6 +141,24 @@ headpunct=:]
 	These are all the eigenvalues and eigenvectors of $ T $, since by Kubrat's hint the Trace is equal to the sum of the eigen values and the trace is eqaul to $ n $ if there are only 1s in the main diagonal. 
 	Since, we found an eigenvalue equal to $ n $ thre can be no more, so we are done. 
 \end{q}
+\begin{q}[23]
+	Suppose $ \lambda $ is an eigenvalue of $ ST $ and $ v $ is the corresponding eigenvector.
+	Then, $ STv = \lambda v $. 
+	Let $ w $ be the vector $ w \in V $ such that $ Tv = w $. 
+	Then, $ Sw = \lambda v $. 
+	Composing $ T $ for both sides we then get 
+	$ TSw = T \lambda v = \lambda Tv $, but then we can substitute for $ Tv $ and get that 
+	$ TSw = \lambda w $. Therefore, $ \lambda $ is an eigenvalue for $ TS $ as well. 
+	This holds for all eigenvalues and therefore they have the same eigenvalues. 
+\end{q}
+\begin{q}[24]
+	(a)
+	Let $ x = (1, 1, ..., 1) \in \F^n $ then, $ Ax $ is just the vector where each row is the sum of the corresponding row.
+	Since, the rows sum to 1, we have that $ Ax = (1, 1, ..., 1) $. So, we have the case that 
+	$$ T(1, ..., 1) = A(1, ..., 1) = \lambda (1, ..., 1) $$
+	Then $ \lambda = 1 $, and will always be an eigenvalue that exists for all $ n $. \\
+	(b) 
+\end{q}
 
 
 
