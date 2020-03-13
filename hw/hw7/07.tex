@@ -90,6 +90,34 @@ headpunct=:]
 		\intertext{Then, we have a contradiction since we claimed that $ u_1, ..., u_m, v_1, ..., v_n $ is a basis and therefore a linearly independent list of vectors. But since they can be expressed as a linear combination of each other as such they are not linearly independent, by some previous exercises. Thus, it must be that $ U = \{0\} $ or $ U = V $.}
 	\end{align*}
 \end{q}
+\begin{q}[8]
+	By defintion we wish to find eigenvalues and eigenvectors, $ v = (w, z) $ such that 
+	$$ T (w, z) = (z, w) = \lambda (w, z) = (\lambda w, \lambda z) $$
+	Then, we have to find solutions to $ \lambda w = z $ and $ \lambda z = w $. 
+	Following some substitutions we get 
+	$$ z(\lambda^2 - 1) = 0 $$
+	Since, $ v \neq 0 $ we are left with $ \lambda = \pm 1 $. \\
+	So, $ \lambda_1 = 1 $ with the corresponding eigenvector $ v_1 = (1, 1)$
+	and $ \lambda_2 = -1 $ with the corresponding eigenvector $ v_2 = (-1, 1) $.
+\end{q}
+\begin{q}[12]
+	We wish to find eigenvalues and eigenvectors, 
+	$ p(x) = a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 $, such that
+	$$ (Tp)(x) = x p'(x) = \lambda p(x) $$
+	That is, 
+	$ 4 a_4x^4 +  3a_3x^3 + 2 a_2x^2 + a_1x = \lambda a_4x^4 +\lambda a_3x^3 +\lambda a_2x^2 +\lambda a_1x +\lambda a_0 $.
+	So, clearly $ 4 a_4 x^4 = \lambda a_4 x^4 $. Solving for this we get $ \lambda = 4 $, but then the following terms do not hold so we must have that $ a_3 = a_2 = a_1 = a_0 = 0 $. 
+	So the polynomial for $ \lambda = 4 $ must be of the form $a_4 x^4 $. 
+	We follow with this argument for the remaining terms to get that the eigenvalues are 
+	$ \lambda = 4, 3, 2, 1 $ and that the corresponding eigenvectors are $ x^4, x^3, x^2, x $ respectively.
+\end{q}
+\begin{q}[13]
+	We can just show that $ \alpha - \lambda \leq |\alpha - \lambda| < \frac{1}{1000} $ is equivalent to showing 
+	$ \alpha < \frac{1}{1000} + \lambda $ since we are working with elements in our field and performing field operation it must be the case that $ \alpha \in \F $. (Clearly this wont hold in ALL fields but in the world of Axler this is just $ \C $ or $ \R $).
+	Then since $ V $ is finite dimension there are at most $ \dim V $ many eigenvalues, that is finite number of eigenvalues. 
+	Again, since we are either working with either the reals or complex, which are both infinite just select a number $ \alpha $ that satisfies the inequality and is not eqaul to one of the eigenvalues. 
+	Then, it follows by 5.6, since we chose $ \alpha $ such that it is not an eigenvalue $ T - \alpha I $ is invertible.
+\end{q}
 
 
 
