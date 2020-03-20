@@ -47,5 +47,29 @@
     By definition $ T - I $ is equal to the 0 linear map, so from $ T - I = 0 $ it follows that
     $ T = I $
 \end{q}
+\begin{q}[4]
+    From $ P^2 = P $ we have that $ P^2 - P = 0 $ so it must be that 
+    $$ P(P - I) = 0 $$
+    So for all $ v \in V $ we have that 
+    $$ P(P - I)v = 0v = 0 $$
+    Thus
+    $$ Pv = 0 \text{ or } Pv = v $$
+    To show that $ V = \nul P \oplus \range P $ we first will show that $ \nul P \cap \range P = \emptyspace $.
+    Suppose $ v \in \nul P \cap \range P $. 
+    Then, $ Pv = 0 $ and $ Pv = v $ it follows directly then that $ v = 0 $, so 
+    $$ \nul P \cap \range P = \emptyspace $$
+    % NOTE: Ask Alex if it is actually necessary to show this, since $ P $ is an operator. I think it is since $ V $ is infinite. 
+    Since, $ P \in \Operator{V} $ we already have that $ \range P \subset V $ and $ \nul P \subset V $. 
+    Then for $ v \in \range P $ and $ w \in \nul P $ clearly $ v + w \in V $ so we have that 
+    $$ V \supset \range P \oplus \nul P $$
+    For the other side, let $ v \in V $ we have that $ Pv = 0 $ or $ Pv = v $. 
+    So, $ v \in \range P $ or $ v \in \nul P $ then it follows that clearly for all $ v \in V $ we have that 
+    $ v = v + 0 $ or $ v = 0 + v $. 
+    So, 
+    $$ V \subset \range P \oplus \nul P $$
+    Therfore,
+    $$ V = \range P \oplus \nul P $$
+\end{q}
+
 
 \end{document}
