@@ -2,6 +2,7 @@
 \usepackage{../hw}
 \title{Homework 8}
 \author{Tarang Srivastava}
+
 \begin{document}
 \makechaptertitle
 
@@ -69,6 +70,111 @@
     $$ V \subset \range P \oplus \nul P $$
     Therfore,
     $$ V = \range P \oplus \nul P $$
+\end{q}
+\begin{q}[8]
+    I'm just going to express $ T $ as a matrix in terms of the standard basis of $ \R^2 $, I hope that's okay. 
+    So, the goal is that $ T^4 = -1 $ well if we find $ T $ such that it represent an eighth clockwise turn, we are done. 
+    Since 4 turns of $ T $ would be equivalent to $ - 1 $. 
+    We can construct $ T $ by simply seeing where the basis vectors would be mapped if they were turned by an eigth. 
+    So, $ (1, 0) $ would map to $ (\sqrt{2}/2, \sqrt{2}/2)$ and then $ (0, 1) $ would map to $ (\sqrt{2}/2, -\sqrt{2}/2)$. 
+    That is basically the definition of $ T $, but in matrix form it is 
+    $$ T = \begin{pmatrix}
+        \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \\
+        \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2}
+        \end{pmatrix} 
+    $$
+\end{q}
+\begin{q}[9]
+    If $ p(T)v = 0 $ by properties of polynomials we can then express $ p(T) $ as a polynomial where we factor out the zero. 
+    That is for some $ q \in \poly{}{\F} $ and some constant $ \lambda \in \F $, 
+    $$ p(T) = q(T) \cdot (T - \lambda) $$
+    Then we have that, 
+    $ (T - \lambda) v = 0 $, so then by rearranging we get that in fact $ Tv = \lambda v $. 
+    So, $ \lambda $ must be an eigenvector of $ T $.
+\end{q}
+\begin{q}[10]
+    Given $ \lambda $ is an eigenvalue of $ T $ we have that $ Tv = \lambda v $ for some eigenvector $ v $. 
+    Thus, we know that $ T(Tv) = T \lambda v = \lambda Tv = \lambda^2 v $. We then use this inductive argument to get that $ T^n v = \lambda^n v $.
+    Since, $ p(T) $ is of some form as $ p(T)v = a_m T^mv + ... $ we can simply replace each term of $ T^mv $ with $ \lambda^m v$, 
+    then we get it is equivalent that $ p(T)v = a_m \lambda^m v + ...  $ which is equivalent to expressing the polynomial for $ \lambda $ 
+    That is, $ p(\lambda)v = a_m \lambda v + ... $ so we get 
+    $$ p(T)v = p(\lambda)v $$
+\end{q}
+\begin{q}[11]
+    $ \implies $ direction.
+    Sice we are working with $ \C $ we have the nice property that 
+    $$ p(T) = c(T - \lambda_1 I)...(T - \lambda_m I) $$
+
+    $ \impliedby $ direction. 
+    We know that if $ \alpha = p(\lambda) $ for some eigenvalue $ \lambda $ of $ T $ then from Problem 10 we know that 
+    $$ p(T) v = p(\lambda) v $$
+    where $ v $ is the corresponding eigenvector.
+    Then, we directly have that 
+    $$ p(T) v = \alpha v $$
+    Thus, by definition $ \alpha $ is an eigenvalue of $ p(T) $.
+\end{q}
+
+\section{Exercises 5.C}
+\begin{q}[1]
+    We use the fact that since $ T $ is diagonalizable then 
+    $$ V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T) $$
+    So, now we just wish to show that $ \nul T $ and $ \range T $ are some combination of these eigenspaces.
+    Observe that $ \nul T $ is equivalent to when $ Tv = 0 = 0v $ that is $ \lambda = 0 $. 
+    So, if there is an eigenvalue equal to zero then $ \nul T = E(0, T) $.
+    Then, observe that $ V $ has a basis consiting of eigenvectors of $ T $, so it suffices to show that if there is a basis of eigenvectors 
+    for all $ v \in V $ we have that $ v = a_1u_1 + ... + a_m u_m $ where $ u_i $ is an eigenvector. 
+    Well since $ E(\lambda, T ) $ is a subspace of $ V $ it holds that any scalar multiple of $ u_i $ is also in its corresponding eigenspace.
+    Therefore, for all $ v \in V $ since we can express it as a sum of $ v = a_1 u_1 + ... + a_m u_m $ and each term is in a corresponding eigenspace 
+    then all the $ Tv \neq 0 $ are expressed as that sum which is equivalent to the range of $ T $. 
+    Thus, $ V = \nul T \oplus \range T $. 
+\end{q}
+\begin{q}[3]
+    Well (b) and (c) are literally the definition of (a) so showing (b) and (c) are equivalent suffices to show (a) is equivalent.
+    For (b) $ \implies $ (c). 
+    We have by nullity-rank that 
+    $$ \dim V = nullity + rank $$
+    We also have that since the null space and range are subspaces of $ V $
+    $$ \dim (\nul T + \range T) = nullity + rank - (\nul T \cap \range T) $$
+    But since we have that $ V = \nul T + \range T $ We get that
+    $$ nullity + rank = nullity + rank - \dim (\nul T \cap \range T) $$
+    So that implies that $\dim (\nul T \cap \range T) = 0 $ thus it must be that $ (\nul T \cap \range T) = \emptyspace $. \\
+    For (b) $ \impliedby $ (c). 
+    We have that 
+    $$ \dim (\nul T + \range T) = nullity + rank - (\nul T \cap \range T)$$
+    Since, $ (\nul T \cap \range T) = \emptyspace $
+    by combining nullity-rank theorem we have 
+    $$ \dim (\nul T + \range T) = nullity + rank = \dim V$$
+    Thus it must be in a finite dimensional space that
+    $$ \nul T +\range T = V $$
+\end{q}
+\begin{q}[5]
+    Given that $ T $ is diagonal we know that by subtracting $ \lambda I $ we still have a matrix that has elements only in the diagonal and zeros everywhere else. 
+    So it follows from definition that $ T - \lambda I $ is diagonal as well. After that we can directly apply Problem 1 to show $ \implies $ direction.
+    For the $ \impliedby $ direction. 
+\end{q}
+\begin{q}[16]
+    (a)
+    We proceed by induction on $ n $. For the base case $ n = 1 $ we have that 
+    $$ T(0, 1) = (1, 1) = (F_1, F_2) $$
+    Then assume the claim holds for some $ n = k $. That is, 
+    $$ T^k(0, 1) = (F_k, F_{k + 1}) $$
+    Then we can just compose $ T $ again to get
+    $$ T^{k+1}(0, 1) = T(F_k, F_{k + 1}) = (F_{k + 1}, F_k + F_{k + 1}) = (F_{k + 1}, F_{k + 2})$$
+    So we showed the inductive step holds and thus the claim holds for all $ n $. \\
+    (b) this homework is so fucking long and so fucking boring fuck this shit . I miss discrete math with its fun hw problems.
+\end{q}
+
+\section{Exercises 6.A}
+\begin{q}[11]
+    This is a direct application of Cauchy-Schwarz inequality. 
+    The statement holds for all positive $ a, b, c, d $ because we set it up with the terms 
+    $ \frac{1}{\sqrt{a}} $ and $ \sqrt{a} $ and 
+    $ \frac{1}{\sqrt{b}} $ and $ \sqrt{b} $ and 
+    $ \frac{1}{\sqrt{c}} $ and $ \sqrt{c} $ and 
+    $ \frac{1}{\sqrt{c}} $ and $ \sqrt{c} $. 
+    Then we have something of the form
+    $$ | 1 + 1 + 1 + 1 |^2 = 16 \leq (a+b+c+d)\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}\right)$$
+    which we get from just squaring all the terms before to fit the Cauchy-Schwarz inequality form.
 \end{q}
 
 
