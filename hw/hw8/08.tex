@@ -6,5 +6,23 @@
 \makechaptertitle
 
 \section{Exercises 5.B}
+\begin{q}[1]
+    We wish to show that 
+    $$ \inv{(I - T)} = I + T + ... + T^{n - 1} $$
+    So, we can multiply $ I - T $ to both sides to get 
+    $$ I = (I - T)(I + T + ... + T^{n - 1}) $$
+    Then, we can distribute and see we get 
+    $$ I = I - T + T - T^2 + T^2 + ... - T^{n-1}  + T^{n-1} + T^{n} $$
+    After cancelling out all the similar terms we are left with
+    $$ I = I + T^{n} = I $$
+    Since, $ T^n = 0 $. 
+    So, to prove the statement we do the following operations
+    $$ I = I + T^{n} = I $$
+    $$ I = I - T + T - T^2 + T^2 + ... - T^{n-1}  + T^{n-1} + T^{n} $$
+    $$ I = (I - T)(I + T + ... + T^{n - 1}) $$
+    Then, we multiply both sides by $ \inv{(I - T)} $ to get 
+    $$ \inv{(I - T)} = I + T + ... + T^{n - 1} $$
+    as desired.
+\end{q}
 
 \end{document}
