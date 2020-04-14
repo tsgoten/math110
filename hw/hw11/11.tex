@@ -30,7 +30,20 @@
 \end{q}
 
 \begin{q}[6]
-     
+    $ \implies $ direction follows easily from 7.13, if $ T $ is self-adjoint then all the eigenvalues are real. \\
+    $ \impliedby $ Given $ T $ is normal then $ T^* $ and $ T $ have the same eigenvectors 
+    and for the corresponding eigenvalue $ \lambda $ for $ T $, $ T ^* $ has the associated eigenvalue $ \overline{\lambda} $ for the same eigenvector.
+    If all the eigenvalues are real $ \lambda = \overline{\lambda} $, so $ T $ and $ T^* $ have the same eigenvalues and eigenvectors.
+    By the complex spectral theorem $ V $ has an orthogonal basis consisting of eigenvectors of $ T $.
+    Denote these basis eigenvectors as $ e_1, ..., e_n $.
+    Let $ v \in V $, then for some $ a_1, ..., a_n \in \C $
+    \begin{align*}
+    Tv &= a_1T(e_1) + ... + a_n T(e_n) \\
+    &= a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n \\
+    &= a_1T^*(e_1) + ... + a_n T^*(e_n) \\
+    Tv &= T^*v
+    \end{align*}
+    For all $ v \in V $ so $ T = T^* $, therefore $ T $ is self adjoint.
 \end{q}
 
 \end{document}
