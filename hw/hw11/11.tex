@@ -54,7 +54,29 @@
 \end{q}
 
 \begin{q}[10]
-    This is so hard wtf.
+    Let $ V = \R^2 $ and $ T $ be the operator represented by this matrix for the standard basis of $ \R^2 $. 
+    $$ \left(\begin{array}{cc}
+        -1 & -2 \\
+        1 & 1 
+    \end{array} \right) $$
+    For $ b = 0 $ and $ c = 1 $
+    $$ \left(\begin{array}{cc}
+        -1 & -2 \\
+        1 & 1 
+    \end{array} \right) 
+    \left(\begin{array}{cc}
+        -1 & -2 \\
+        1 & 1 
+    \end{array} \right)
+    + (1) 
+    \left(\begin{array}{cc}
+        1 & 0 \\
+        0 & 1 
+    \end{array} \right)
+    =
+    0
+    $$
+    Since we can compute that $ T^2 = -I $. The zero operator is non invertible so we are done.
 \end{q}
 
 \begin{q}[11]
@@ -72,20 +94,61 @@
 \end{q}
 
 \begin{q}[12]
-    
+    By the spectral theorem there exists an orthonormal basis of $ V $ consisiting of eigenvectors of $ T $.
+    So $ v $ is equal to 
+    $$ v = a_1 e_1 + ... + a_n e_n $$ 
+    Where, the $ a_1, ..., a_n $ are some scalars and the $ e_1, ..., e_n $ are the orthonormal basis eigenvectors.
+    Then, 
+    $$ Tv = a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n $$ 
+    So we can restate the inequality as 
+    \begin{align*}
+    \norm{Tv - \lambda v}  &= \norm{a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n - \lambda v} \\
+    &= \norm{ \abs{\lambda_1 - \lambda} a_1 e_1 + ... + \abs{\lambda_1 - \lambda} a_n e_n} \\
+    \intertext{Then since the basis vectors are orthogonal we can express them as}
+    &= \norm{\abs{\lambda_1 - \lambda} + ... + \abs{\lambda_1 - \lambda}}\norm{a_1 e_1 + ... + a_n e_n} \\
+    \intertext{Following that $ \norm{v} = 1 $}
+    &= \norm{\abs{\lambda_1 - \lambda} + ... + \abs{\lambda_1 - \lambda}} \\
+    \end{align*}
+    So we are given that 
+    $$ \norm{\abs{\lambda_1 - \lambda} + ... + \abs{\lambda_1 - \lambda}} < \epsilon $$
+    Assume for contradiction that $ \abs{\lambda - \lambda_i} \geq \epsilon $ for all $ i \in 1, ..., n $.
+    Then, we can make the following substitutions
+    $$ \norm{\epsilon + ... + \epsilon} = n \epsilon < \epsilon $$ 
+    Which then implies that $ n < 1 $ which is a contradiction since it would imply that $ V $ has dimension 0, but it clearly doesn't since $ v \in V $ and $ \norm{v} = 1 $.
+    Thus, we have a contradiction and it must be that there exists some eigenvalue $ \lambda' $ the statement holds.
 \end{q}
 
 \begin{q}[13]
-    
+    The first part of (c) if and only if (a) we proceed as in the provided proof. 
+    Then to show that the last part that (a) implies (b) we note that if our operator is normal, 
+    then we have to consider a basis eigenvector $ v $ such that
 \end{q}
 
 \begin{q}[14]
-    $ \impliedby $ is given by the real spectral theorem. \\
-    $ \implies $ We observe that since there is a basis of eigenvectors of $ T $, we have  
+    $ \impliedby $ By the real spectral theorem if $ T $ is self-adjoint and the inner product makes $ U $ an inner product space, 
+    then $ U $ has a basis consisting of eigenvectors of $ T $. \\
+    $ \implies $ If $ T $ has a basis consisiting of eigenvectors, then it is diagonalizable by 5.41. 
+    Now if we just provide an inner product on $ U $ such that the basis eigenvectors are orthonormal we can just apply the real spectral theorem and be done.\\
+    Let $ e_1, .., e_n $ be the eigenvector basis. Then, for arbitrary $ v, w \in V $ 
     $$ v = a_1 e_1 + ... + a_n e_n $$
-    For some basis and scalars. Then
-    $$ Tv = \lambda_1 a_1 e_1 + ... + \lambda_n a_n e_n $$
-    Suppose we state that $ w = v $
+    and 
+    $$ w = b_1 e_1 + ... + b_n e_n $$
+    For some real number scalars.
+    we define the inner product $ \ip{v, w} $ as follows 
+    $$ \ip{v, w} = a_1 \cdot b_1 + ... + a_n \cdot b_n $$
+    We will now confirm that all the properties of an inner product do indeed hold.
+    \begin{enumerate}
+        \item Positivity: Observe that $ \ip{v, v} = a_1^2 + ... + a_n^2 \geq 0 $.
+        \item Definiteness: By the property of linearly independent vectors, 
+        $ \ip{v, v} = a_1^2 + ... + a_n^2 = 0 $ only when $ a_1 = ... = a_n = 0 $ which is when $ v = 0 $.
+        \item Additivity: pretty straightforward from the commutitivity and distributivity in $ \R $.
+        \item Homogeniety: straightforward from the distributivity of real numbers.
+        \item Conjugate symmetry: Since we are in a real vector space conjugates are equal to the number itself. 
+        So, $ \ip{v, w} = a_1 b_1 + ... + a_n b_n = b_1 a_1 + ... + b_n a_n = \ip{w, b} $ form the commutitivity of real numbers.
+    \end{enumerate}
+    Having done ALL that we can confirm that the basis eigenvectors are indeed normal and orthogonal in this definition of the inner product.
+    This follows simply from the fact that $ <e_i, e_i > = 1 * 1 = 1 $ and we have that  $ < e_i, e_j > = 1 * 0 + 0 * 1 = 0 $ for different basis vectors. 
+    Therefore, we can apply the real spectral theorem and get that $ T $ must be self adjoint, since there is a diagonal matrix of orthonormal basis.
 \end{q}
 
 \end{document}
