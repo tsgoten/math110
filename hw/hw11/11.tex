@@ -120,8 +120,15 @@
 
 \begin{q}[13]
     The first part of (c) if and only if (a) we proceed as in the provided proof. 
-    Then to show that the last part that (a) implies (b) we note that if our operator is normal, 
-    then we have to consider a basis eigenvector $ v $ such that
+    Then to show that the last part that (a) implies (b) we begin with each part as used in the proof for the real spectral theorem.
+    First note that the equation of $ T^2 + bT + cI $ is not needed int the proof since we have the fact that $ \norm{Tv} = \norm{T^* v} $ which we can use in the proof.
+    The, normal operators in complex vector spaces clearly always have eigenvalues, since in any complex vector space the operator has eigenvectors.
+    Then we wish to show the condition that the subspaces are invariant under the orthongal compliment.
+    Observe that if $ U $ is a subspace that is invariant under $ T $. 
+    Let $ U $ be equal to the span of an eigenvector then that is $ T $ invariant and the complement is invariant as well since it is just a sum of eigenvalues and scalars.
+    Then we wish to show that $ T|_U $ is normal as well, which holds from the fact that 
+    $ \ip{T|_U u, v} = \ip{Tu, v} = \ip{u, T^* v} = \ip{u, T^*|_U v} $.
+    Then I guess we can make very similar arguments to show that it holds.
 \end{q}
 
 \begin{q}[14]
