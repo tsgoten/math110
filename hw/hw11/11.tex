@@ -170,7 +170,46 @@
 \end{q}
 
 \begin{q}[2]
-    
+    We have the following inequalitiy by $ T $ being positive
+    \begin{align*}
+        \ip{T(v-w), v - w} &\geq 0 \\
+        \ip{Tv - Tw, v - w} &\geq  \\
+        \ip{w - v, v - w} &\geq  
+        \intertext{Multiplying both sides by -1 we get}
+        -1 \ip{w - v, v - w} &\leq 0 \\
+        \ip{v - w, v - w} &\leq 0 \\
+        \intertext{by the property of inner products we also have that}
+        \ip{v - w, v - w} &\geq 0 \\
+        \intertext{So then it must be the case that}
+        \ip{v - w, v - w} &= 0
+        \intertext{So again by definiteness}
+        v - w &= 0 \\
+        v &= w
+    \end{align*}
+\end{q}
+
+\begin{q}[4]
+    We will abuse the associative property and the definition of adjoints to get the result. 
+    Observe, that $ T^*T $ is already an operator in $ \Operator{V} $. Let $ v, w \in V $.
+    \begin{align*}
+        \ip{v, (T^* T) w} &= \ip{v, T^* (Tw)} \\
+        &= \overline{ \ip{T^* (Tw), v} } \\
+        &= \overline{\ip{Tw, (T^*)^* v}} \\
+        &= \overline{\ip{Tw, Tv}} \\
+        &= \overline{\ip{w, T^*Tv}} \\
+        &= \ip{T^* Tv, w}
+    \end{align*}
+    Thus, by definition $ T^*T $ is self-adjoint.
+    We construct a similar series of steps for $ TT^* $. 
+    (Ask Alex if I can state that since $ T^*T $ is positive, then its adjoint is also positive so $ TT^* $ is positive.)
+    Observe again that $ TT^* $ is an operator on $ W $. 
+    \begin{align*}
+        \ip{v, TT^* w} &= \overline{\ip{TT^* w, v}} \\
+        &= \overline{\ip{T^* w, T^* v}} \\
+        &= \overline{\ip{w, TT^* v}} \\
+        &= \ip{TT^* v, w}
+    \end{align*}
+    Then, since both operators are self-adjoint they are also positive. 
 \end{q}
 
 \end{document}
