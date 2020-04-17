@@ -244,7 +244,14 @@
 \end{q}
 
 \begin{q}[11]
-    
+    This seems like some change of basis stuff going on. 
+    Let $ v $ be arbitrary. Then by the spectral theorem on $ T_1 $ there exists a basis of orthonormal eigenvectors such that 
+    $ T_1 v = a_1 2 e_1 + a_2 5 e_2 + a_3 7 e_3 $ for the eigenvectors $ e_1,.., e_3 $ and some scalars.
+    Then given $ e_1, ..., e_3 $ define $ S $ to be the linear map such that $ Se_1, ..., Se_3 $ be equal to the orthonormal basis of eigenvectors for $ T_2 $ guaranteed by the spectral theorem. 
+    Since, this is just a defnintion of a linear map but it maps the orthonormal basis of $ V $ to another orthonormal we know that $ S $ must be an isometry. 
+    Observe, that since the vector space has dimension 3 any other orthonormal basis will be a linear combinaiton of the one described, so $ S $ will still map it to an orthonormal basis.  
+    With this we have showed that such an isometry exists so then $ \inv{S} $ exists as well and then it will just map the linear combination in $ T_2 $'s eigenvectors back to $ T_1 $'s. 
+    Preserving the constants, and the eigenvalues since the eigenvalues are the same.
 \end{q}
 
 \end{document}
