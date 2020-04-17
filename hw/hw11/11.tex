@@ -215,11 +215,26 @@
 \end{q}
 
 \begin{q}[7]
-
+    $ \implies $ Given that $ T $ is positive there exists a $ R $ such that $ T = R^* R $. 
+    From some past hw exercies we know that since $ T $ is invertible so must $ R^* $ and $ R $.
+    Then we have that $ \ip{Tv, v} = \ip{R^*Rv, v} = \ip{Rv, Rv} $ which is never equal to zero for nonzero values, and is positive. \\
+    $ \impliedby $ Assume for contradiction that $ T $ is not invertible, that is $ \nul T \neq \emptyspace $. 
+    Then, there must exists some nonzero $ v \in \nul T $. 
+    This is a contradiction since that would mean that $ \ip{Tv, v} = \ip{0, v} = 0 $.
 \end{q}
 
 \begin{q}[8]
-    
+    $ \implies $ If $ \ip{.,.}_T $ is an inner product then the definiteness property ensures that $ T $ is invertible, 
+    since $ \ip{v, v}_T = 0 $ if and only if $ v = 0 $ so that ensures that the $ \nul T = \emptyspace $.
+    The Positivity property ensures that $ T $ is a positive operator since $ \ip{v, v}_T \geq 0 $ so $ \ip{Tv, v} \geq 0 $.
+    (Note: In a real vectors space conjugate symmetry would also ensure that $ T $ is self adjoint :) \\
+    $ \impliedby $ If $ T $ is positive then it ensures Positivity in the inner product. 
+    Since, $ T $ is invertible by the previous example and question 7 it ensures that it is definiteness. 
+    Additivity in the first slot follows from $ T $ being a linear map and closure under vector addition, followed by addition in the first slot of the original inner proudct.
+    Homogeniety in the first slot follows from $ T $ being a linear map and closure under scalar multiplication, followed by Homogeniety in the first slot of the original inner proudct.
+    And conjugate symmetry is given by the fact that $ T $ is positive and given that it is invertible it has no nonzero eigenvalues, so it must be self-adjoint. 
+    Thus $ \ip{Tu, v} = \ip{u, Tv} $ so the inner product follows that as well. 
+    Therefore, it is a valid inner product.
 \end{q}
 
 \begin{q}[9]
