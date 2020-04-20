@@ -7,8 +7,55 @@
 \makechaptertitle
 
 \section{Exercises 7.D}
-\begin{q}
-    
+\begin{q}[1]
+    First we verify that the given operator
+    $$ \sqrt{T^{*} T} v=\frac{\|x\|}{\|u\|}\langle v, u\rangle u $$
+    is indeed positive. 
+    Observe that when we calculate 
+    $$ \ip{\sqrt{T^{*} T} v, v} = \frac{\|x\|}{\|u\|}|\langle v, u\rangle|^2 $$
+    it is always a non-negative value, thus the operator is positive.
+    Second we find the adjoint of $ T $. 
+    Define $ T^* $ as follows
+    $$ T^*v = \ip{v, x} u $$
+    with the same fixed $ x $ and $ u $ as for $ T $.
+    This is a valid adjoint since for $ v, w \in V $ we have
+    \begin{align*}
+        \ip{Tv, w} &= \ip{v, T^*w} \\
+        \ip{v, u}\ip{x, w} &= \ip{v, u}\overline{\ip{w, x}} = \ip{v, u}\ip{x, w}
+    \end{align*}
+    For all $ v \in V $ we have that 
+    \begin{align*}
+        T^* T v &= T^*(\ip{v, u} x) \\
+        &= \ip{v, u} \ip{x, x} u
+    \end{align*}
+    Then, we can verify that indeed $ \sqrt{T^* T}^2 = T^*T $ that we calculated.
+    Therefore, given that it is positive it is a valid square root of $ T^*T $.
+\end{q}
+
+\begin{q}[2]
+    Let $ T $ be the operator represented by this $ 2 \times 2 $ matrix with the standard basis.
+    $$
+    T =
+        \left(
+        \begin{array}{cc}
+            -5/2  & 5/2 \\
+            -5/2 & 5/2
+        \end{array}
+        \right)
+    $$
+    The eigenvalues for $ T $ are exactly $ \lambda = 0 $.
+    Then we find $ T^* T $ using the adjoint of the matrix provided. 
+    $$ 
+    T^* T = 
+        \left(
+        \begin{array}{cc}
+            25/2  & -25/2 \\
+            -25/2 & 25/2
+        \end{array}
+        \right)
+    $$
+    The eigenvalues for which are equal to $ \lambda = 25, 0 $. 
+    So the singular values are equal to $ \sigma = 5, 0 $.
 \end{q}
 
 \end{document}
