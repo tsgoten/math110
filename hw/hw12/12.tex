@@ -109,4 +109,19 @@
     So, the singular values aren't even equal. 
 \end{q}
 
+\begin{q}[13]
+    $ \implies $
+    First note that $ \sqrt{0} = 0 = 0^2 $.
+    If $ T $ is invertible, then $$ \nul \adjoint{T} = (\range T)^\perp = V^\perp = \emptyspace $$
+    So, $ T^* $ is invertible, and then $ T^*T $ is invertible.  
+    Then from a pervious exercise, $ T^* T $ does not have zero as an eigenvalue.
+    Since the singular values are the positive square root of the eigenvalues of $ \adjoint{T} T $ and it has non-zero eigenvalues, 
+    then the singular values are all non-zero as well. \\
+    $ \impliedby $ Consider the polar decomposition of $ T $. 
+    If all the singular values are nonzero, then $ \sqrt{\adjoint{T} T} $ has all nonzero eigenvalues.
+    Then, $ \nul \sqrt{\adjoint{T} T} = \emptyspace $ so it is inveritble. 
+    Since, $ S $ is an isometry and we have a composition of invertible operators $ S $ and $ \sqrt{\adjoint{T} T} $ which is invertible, 
+    Therefore, $ T $ is invertible.
+\end{q}
+
 \end{document}
