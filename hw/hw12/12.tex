@@ -58,4 +58,55 @@
     So the singular values are equal to $ \sigma = 5, 0 $.
 \end{q}
 
+\begin{q}[4]
+    Consider the polar decomposition for $ T $  
+    $$ T = S \sqrt{T^* T}$$
+    Then let $ v \in V $ be such that it is an eigenvector for $ \sqrt{T^* T} $ with the associated eigenvalue $ s $.
+    So, 
+    $$ Tv = S(sv) $$
+    $$ \norm{Tv} = \norm{S(sv)} = \abs{s}\norm{Sv} $$
+    Given that $ S $ is an isometry we then have
+    $$ \norm{Tv} = s \norm{v} = s $$
+    Since, $ s $ is nonnegative and the norm of $ v $ is 1. 
+    By polar decomposition there always exists $ \sqrt{T^* T} $ thus an eigenvector associated with it.
+\end{q}
+
+\begin{q}[10]
+    The singular values are the eigenvalues of $ \sqrt{\adjoint{T}T} $. 
+    If $ T $ is self adjoint then $ \sqrt{\adjoint{T}T} = \sqrt{T^2} $. 
+    From previous exercises we know that the eigenvalues for $ T^2 $ are just the eigenvalues $ \lambda $ for $ T $ squared, that is $ \lambda^2 $. 
+    So we have that for all eigenvectors $ v $ of $ \sqrt{\adjoint{T}T} $
+    $ \sqrt{T^2}v = sv $ such that $ T^2v = s^2v = \lambda^2 v $. 
+    Taking the square root on both sides we get that $ s = \abs{s} = \abs{\lambda} $.
+\end{q}
+
+\begin{q}[11]
+    First observe that the singular values for $ T^* $ are the eigenvalues of 
+    $ \sqrt{TT^*} $.
+    We know that $ T $ and $ \adjoint{T} $ have the same eigenvectors,
+    and the associated eigenvalues are $ \lambda $ and $ \overline{\lambda} $ respectively. 
+    Then for some eigenvector we have 
+    $$ T^*Tv = T^*\lambda v = \abs{\lambda}^2 v $$
+    also
+    $$ TT^*v = T^*\overline{\lambda} v = \abs{\lambda}^2 v $$
+    Since, $ TT^* $ and $ \adjoint{T}T $ have the same positive eigenvalues. 
+    Their, singular values are the same, equal to the positive square root of those same eigenvalues.
+\end{q}
+
+\begin{q}[12]
+    Consider the vector space $ V = \F^2 $ and the operator $ T $ represented by the following matrix in the standard basis.
+    $$
+    T = 
+        \left(
+            \begin{array}{cc}
+                0 & 0 \\
+                -1 & 0 \\ 
+            \end{array}
+        \right)
+    $$
+    Then this operator has the singular values $ \sigma = 1, 0 $.
+    Observe that, $ T^2 = 0 $, so it has the singular values $ \sigma = 0 $ 
+    So, the singular values aren't even equal. 
+\end{q}
+
 \end{document}
