@@ -124,10 +124,33 @@
     Therefore, $ T $ is invertible.
 \end{q}
 
+\pagebreak
 \section{8.A}
 
 \begin{q}[3]
-     
+    \question{wip}
+    We will proceed by induction on $ j $. 
+    Consider the subspace $ \nul (T - \lambda I)^j $, 
+    and $ \nul (\inv{T} - \frac{1}{\lambda} I)^j $. 
+    It holds that each of these subspaces are a subset of 
+    $ G(\lambda, T) $ and $ G(\inv{\lambda}, \inv{T}) $ respectively. \\
+    For the base case let $ j = 1 $.
+    Then for all $ \lambda $ it holds that if 
+    $ v \in \nul (T - \lambda I) $ then 
+    $$ Tv = \lambda v $$
+    So taking the inverse operator to both sides we get
+    $$ \inv{T}Tv = v = \lambda \inv{T} v $$
+    Which implies that 
+    $ \inv{T}v = \inv{\lambda} v $, 
+    and by the same argument as before this implies $ v \in \nul (\inv{T} - \frac{1}{\lambda} I) $. 
+    Since this holds for all $ \lambda $ 
+    and all eigenvectors we have shown that 
+    $ \nul (T - \lambda I) \subseteq \nul (\inv{T} - \inv{\lambda} I) $. 
+    We proceed with the exact same steps, but for $\nul (\inv{T} - \inv{\lambda} I) $ and we get the result
+    $ \nul (T - \lambda I) \supseteq \nul (\inv{T} - \inv{\lambda} I) $. 
+    Therefore, 
+    $ \nul (T - \lambda I) = \nul (\inv{T} - \inv{\lambda} I) $. \\
+    Having shown the base case assume the claim holds for some $ j = k $.
 \end{q}
 
 \begin{q}[4]
@@ -140,23 +163,82 @@
 \end{q}
 
 \begin{q}[6]
-    
+    Assume for contradiction that there exists a $ S \in \Operator(\C^3) $
+    such that $ S^2 = T $. 
+    We can see that $ T^3 = 0 $, so $ S^6 = 0 $. 
+    But since the dimension of the vector space is 3 we have that
+    $$ \nul S^3 = ... = \nul S^6 $$
+    Specifically this means that $ \nul S^4 = \nul S^6 = \C^3 $. 
+    But this is a contradiction since we know that 
+    $$ T^2 \neq 0 $$
+    So $ \nul S^4 \neq \nul T^2 $. 
 \end{q}
 
 \begin{q}[8]
-    
+    No! Consider the vector space $ \C^2 $ 
+    and the operators $ S $ and $ T $ given by following matrices respectively
+    $$ 
+        \left(
+            \begin{array}{cc}
+                0 & 1 \\
+                0 & 0 
+            \end{array}
+        \right)
+        \text{ and }
+        \left(
+            \begin{array}{cc}
+                0 & 0 \\
+                1 & 0 
+            \end{array}
+        \right)
+    $$
+    in the standard basis for $ \C^2 $.
+    It's easy to see that $ S^2 = 0 $ and $ T^2 = 0 $, so they both are nilpotent operators.
+    Then it easily follows that the set of nilpotent operators is not closed under vector addition, 
+    because for $ S + T $ given by the matrix
+    $$
+        \left(
+            \begin{array}{cc}
+                0 & 1 \\
+                1 & 0 
+            \end{array}
+        \right)
+    $$
+    We have that $ (S + T)^2 = I $. 
+    From there it holds that for all $ n \in \N $, 
+    $$ (S + T)^n = I^{n - 1} = I $$
+    so it is never equal to zero and thus not nilpotent.
 \end{q}
 
 \begin{q}[9]
-    
+    We know that $ ST $ and $ TS $ have the same eigenvalues. 
+    Since, $ ST $ is nilpotent, 
+    there is a diagaonl matrix of $ ST $ with all zeros on the diagaonl. 
+    So the one and only eigenvalue of $ ST $ is $ \lambda = 0 $.     
 \end{q}
 
 \begin{q}[11]
-    
+    Let $ n = \dim V $, we know that $ (ST)^n = 0 $. 
+    Then, 
+    \begin{align*}
+        S &= S  \\
+        (ST)^n S &= 0 S = 0 \\
+        T (ST)^n S &= T 0 = 0 \\
+        T (ST)(ST)...(ST)(ST)S &= 0
+        \intertext{then we regroup all the operators to get}
+        (TS)(TS)...(TS) &= 0 
+        (TS)^{n + 1} &= 0
+    \end{align*}
+    Then we know that for any operator raised to a power greater than the dimension it is unchanged, 
+    so $ (TS)^n = (TS)^{n + 1} = 0 $. 
+    Therefore, $ TS $ is nilpotent.
 \end{q}
 
 \begin{q}[14]
-    
+    TL;DR: $ N \implies 8.19 \implies 6.37 $. \\
+    By 8.19 $ N $ has an upper triangular matrix with all zeros on the diagonal. 
+    Then by 6.37, given $ N $ has an upper triangular matrix in some basis, 
+    $ N $ has an upper triangular matrix in an orthonormal basis. 
 \end{q}
 
 \end{document}
