@@ -13,8 +13,18 @@
     is indeed positive. 
     Observe that when we calculate 
     $$ \ip{\sqrt{T^{*} T} v, v} = \frac{\|x\|}{\|u\|}|\langle v, u\rangle|^2 $$
-    it is always a non-negative value, thus the operator is positive.
-    Second we find the adjoint of $ T $. 
+    it is always a non-negative value, thus the operator satisfies the positivity condition.
+    Now we wish to show that it is self adjoint, so observe thtat 
+    $$  \ip{\sqrt{T^* T}v, u} = \frac{\|x\|}{\|u\|}\langle v, u\rangle \ip{u, u} $$
+    $$  \ip{v, \sqrt{T^* T}u} = \frac{\|x\|}{\|u\|} \overline{\ip{u, u}} \ip{v, u} $$
+    So the two inner products are the same, thus the given operator is self adjoint.
+    Secondly, we can verify that the square is equal to the following value we will revisit
+    \begin{align*}
+        \sqrt{T^{*} T} \frac{\|x\|}{\|u\|}\langle v, u\rangle u &= \frac{\|x\|}{\|u\|}\langle v, u\rangle \sqrt{T^{*} T} u \\
+        &= \frac{\|x\|}{\|u\|}\langle v, u\rangle \frac{\|x\|}{\|u\|}\langle u, u\rangle u \\
+        &= \|x\|^2 \ip{v, u} u
+    \end{align*}
+    Third, we find the adjoint of $ T $. 
     Define $ T^* $ as follows
     $$ T^*v = \ip{v, x} u $$
     with the same fixed $ x $ and $ u $ as for $ T $.
@@ -28,8 +38,8 @@
         T^* T v &= T^*(\ip{v, u} x) \\
         &= \ip{v, u} \ip{x, x} u
     \end{align*}
-    Then, we can verify that indeed $ \sqrt{T^* T}^2 = T^*T $ that we calculated.
-    Therefore, given that it is positive it is a valid square root of $ T^*T $.
+    Then, we can verify that indeed $ \sqrt{T^* T}^2 = T^*T $ that we calculated earlier.
+    Therefore, given that it is positive and self-adjiont it must be the unique positive square root of $ T^*T $.
 \end{q}
 
 \begin{q}[2]
