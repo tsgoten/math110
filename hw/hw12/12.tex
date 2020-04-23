@@ -149,8 +149,18 @@
     We proceed with the exact same steps, but for $\nul (\inv{T} - \inv{\lambda} I) $ and we get the result
     $ \nul (T - \lambda I) \supseteq \nul (\inv{T} - \inv{\lambda} I) $. 
     Therefore, 
-    $ \nul (T - \lambda I) = \nul (\inv{T} - \inv{\lambda} I) $. \\
+    $$ \nul (T - \lambda I) = \nul (\inv{T} - \inv{\lambda} I) $$
     Having shown the base case assume the claim holds for some $ j = k $.
+    That is, 
+    $$ \nul (T - \lambda I)^k = \nul (\inv{T} - \inv{\lambda} I)^k $$
+    Now we take an arbitrary $ v \in \nul (T - \lambda I)^{k+1} $. 
+    Since, 
+    $$ \nul (\inv{T} - \inv{\lambda} I)^k \subset \nul (\inv{T} - \inv{\lambda} I)^{k + 1} $$
+    if we have that $ v \in \nul (T - \lambda I)^{k} $, we are done. 
+    Suppose the case that $ v \not\in \nul (T - \lambda I)^{k} $, 
+    then it follows 
+    $$ (T - \lambda I)^k (T - \lambda I) v = 0 = (\inv{T} - \inv{\lambda} I)^k (T - \lambda I)v $$
+
 \end{q}
 
 \begin{q}[4]
