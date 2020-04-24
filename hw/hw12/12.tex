@@ -138,39 +138,29 @@
 \section{8.A}
 
 \begin{q}[3]
-    \question{wip}
-    We will proceed by induction on $ j $. 
-    Consider the subspace $ \nul (T - \lambda I)^j $, 
-    and $ \nul (\inv{T} - \frac{1}{\lambda} I)^j $. 
-    It holds that each of these subspaces are a subset of 
+    Let $ n $ be the dimension of the vector space.
+    Consider the subspace $ \nul (T - \lambda I)^n $, 
+    and $ \nul (\inv{T} - \frac{1}{\lambda} I)^n $. 
+    It follows that each is equal to 
     $ G(\lambda, T) $ and $ G(\inv{\lambda}, \inv{T}) $ respectively. \\
-    For the base case let $ j = 1 $.
-    Then for all $ \lambda $ it holds that if 
-    $ v \in \nul (T - \lambda I) $ then 
-    $$ Tv = \lambda v $$
-    So taking the inverse operator to both sides we get
-    $$ \inv{T}Tv = v = \lambda \inv{T} v $$
-    Which implies that 
-    $ \inv{T}v = \inv{\lambda} v $, 
-    and by the same argument as before this implies $ v \in \nul (\inv{T} - \frac{1}{\lambda} I) $. 
-    Since this holds for all $ \lambda $ 
-    and all eigenvectors we have shown that 
-    $ \nul (T - \lambda I) \subseteq \nul (\inv{T} - \inv{\lambda} I) $. 
-    We proceed with the exact same steps, but for $\nul (\inv{T} - \inv{\lambda} I) $ and we get the result
-    $ \nul (T - \lambda I) \supseteq \nul (\inv{T} - \inv{\lambda} I) $. 
-    Therefore, 
-    $$ \nul (T - \lambda I) = \nul (\inv{T} - \inv{\lambda} I) $$
-    Having shown the base case assume the claim holds for some $ j = k $.
-    That is, 
-    $$ \nul (T - \lambda I)^k = \nul (\inv{T} - \inv{\lambda} I)^k $$
-    Now we take an arbitrary $ v \in \nul (T - \lambda I)^{k+1} $. 
-    Since, 
-    $$ \nul (\inv{T} - \inv{\lambda} I)^k \subset \nul (\inv{T} - \inv{\lambda} I)^{k + 1} $$
-    if we have that $ v \in \nul (T - \lambda I)^{k} $, we are done. 
-    Suppose the case that $ v \not\in \nul (T - \lambda I)^{k} $, 
-    then it follows 
-    $$ (T - \lambda I)^k (T - \lambda I) v = 0 = (\inv{T} - \inv{\lambda} I)^k (T - \lambda I)v $$
-
+    Let $ v \in \nul (T - \lambda I)^n $, then
+    \begin{align*}
+        (T - \lambda I)^n v &= 0 \\
+        \intertext{Since, $ \inv{T} T = I $ and the inverse and the identity operator commute.}
+        \left(\inv{T} - \frac{1}{\lambda}I \right)(-\lambda)^nT^n v &= 0\\
+        \intertext{Since the null space of $ T^n $ is the empty vector space, 
+        it must be that $ v $ is in the null space of the other operators in the term. That is}
+        \left(\inv{T} - \frac{1}{\lambda}I \right)v &= 0 
+        \intertext{Thus,  $\nul (T - \lambda I)^n \subset \nul (\inv{T} - \frac{1}{\lambda} I)^n$. 
+        Now suppose we take $ v \in \nul (\inv{T} - \inv{\lambda} I)^n $}
+        \left(\inv{T} - \frac{1}{\lambda}I \right)v &= 0  \\
+        (T - \lambda I)^n \left(- \frac{1}{\lambda}\right)^n (\inv{T})^n v &= 0 \\
+        \intertext{Since the null space of $ (\inv{T})^n $ is the empty vector space, 
+        it must be that $ v $ is in the null space of the other operators in the term. That is}
+        (T - \lambda I)^n v &= 0
+        \intertext{Thus,  $\nul (T - \lambda I)^n \supset \nul (\inv{T} - \frac{1}{\lambda} I)^n$.}
+    \end{align*}
+    Sof finally we have that the two general eigenspaces are equal.
 \end{q}
 
 \begin{q}[4]
